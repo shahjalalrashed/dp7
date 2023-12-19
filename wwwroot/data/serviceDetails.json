@@ -1,0 +1,25 @@
+{
+  "1": {
+    "image": "/images/servicepromotion/dpservice.jpg",
+    "nameImage": "/images/services/dp-service.png",
+    "name": "DP SERVICE",
+    "list": [
+      "BO account opening and maintenance",
+      "Dematerialization of securities",
+      "Re-materialization of securities",
+      "Change of Ownership",
+      "Pledging and Unpledging services",
+      "Transfer of securities"
+    ]
+  },
+  "2": {
+    "image": "/images/servicepromotion/brokerageservice.jpg",
+    "nameImage": "/images/services/broker-service.png",
+    "name": "BROKER SERVICE",
+    "list": [
+      "Share Buy Sale",
+      "Account Monitor",
+      "Can apply to IPO using our online facility and they have 10% quota in IPO"
+    ]
+  }
+}

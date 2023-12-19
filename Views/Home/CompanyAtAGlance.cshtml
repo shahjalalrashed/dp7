@@ -1,0 +1,67 @@
+﻿@{
+	ViewData["Title"] = "AT-A-Glance dp7";
+}
+@section styles{
+	<link href="~/css/ataglance.css" rel="stylesheet" />
+
+	<style type="text/css">
+	</style>
+}
+
+<!-- ----------------------------------------- -->
+<!--             AT-A-Glance dp7               -->
+<!-- ----------------------------------------- -->
+<section class="container ptb60 text-center">
+    <div class="sec-title">
+        <h2>dp7 AT A GLANCE</h2>
+    </div>
+    <div class="sec-desc pt30">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="dfw">
+                    @* <div class="cdfv">
+                        <div class="logoimgwrap">
+                            <div class="clogoimg">
+                                <img src="~/images/ComplianceStatus/rjsc.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="cerf-name"><span class="fa-solid fa-file-invoice icn"></span>INCORPORATION CERTIFICATE</div>
+                        <div class="numdatewrap">
+                            <div class="numwrap"><span class="fa-solid fa-hashtag icn"></span>C-169708/2021</div>
+                            <div class="dtewrap"><span class="fa-solid fa-calendar-days icn"></span>11 Mar 2021</div>
+                        </div>
+                        <div class="authority">Registrar of Joint Stock Companies & Firms (RJSC)</div>
+                    </div> *@                    
+                </div>
+            </div>
+        </div>
+    </div>	
+</section>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON("/data/compliancedata.json").done(function (data) {
+                var cdfvHtml = "";
+                $.each(data.complianceCertificates, function (i, d) {
+                    cdfvHtml += `
+                        <div class="cdfv">
+                            <div class="logoimgwrap">
+                                <div class="clogoimg">
+                                    <img src="${d.imageSrc}" alt="" />
+                                </div>
+                            </div>
+                            <div class="cerf-name"><span class="fa-solid fa-file-invoice icn"></span>${d.type}</div>
+                            <div class="numdatewrap">
+                                <div class="numwrap"><span class="fa-solid fa-hashtag icn"></span>${d.certificateNumber}</div>
+                                <div class="dtewrap"><span class="fa-solid fa-calendar-days icn"></span>${d.issueDate}</div>
+                            </div>
+                            <div class="authority">${d.authority}</div>
+                        </div>
+                    `;
+                });
+                $(".dfw").append(cdfvHtml);
+            });
+        });
+    </script>
+ }

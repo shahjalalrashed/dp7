@@ -1,0 +1,148 @@
+{
+  "tickerItems": [
+    {
+      "symbol": "BDFINANCE",
+      "change": {
+        "price": -44.10,
+        "percent": -100.00
+      },
+      "icon": {
+        "name": "fa-circle-down",
+        "type": "regular"
+      },
+      "infoClass": "red-ico"
+    },
+    {
+      "symbol": "1JANATAMF",
+      "change": {
+        "price": 0.00,
+        "percent": 0.00
+      },
+      "icon": {
+        "name": "fa-circle-up",
+        "type": "regular"
+      },
+      "infoClass": "green-ico"
+    },
+    {
+      "symbol": "1JANATAMF",
+      "change": {
+        "price": 0.00,
+        "percent": 0.00
+      },
+      "icon": {
+        "name": "fa-sort",
+        "type": "solid"
+      },
+      "infoClass": "green-ico"
+    },
+    {
+      "symbol": "BDFINANCE",
+      "change": {
+        "price": -44.10,
+        "percent": -100.00
+      },
+      "icon": {
+        "name": "fa-circle-down",
+        "type": "regular"
+      },
+      "infoClass": "red-ico"
+    },
+    {
+      "symbol": "1JANATAMF",
+      "change": {
+        "price": 0.00,
+        "percent": 0.00
+      },
+      "icon": {
+        "name": "fa-circle-up",
+        "type": "regular"
+      },
+      "infoClass": "green-ico"
+    },
+    {
+      "symbol": "1JANATAMF",
+      "change": {
+        "price": 0.00,
+        "percent": 0.00
+      },
+      "icon": {
+        "name": "fa-sort",
+        "type": "solid"
+      },
+      "infoClass": "green-ico"
+    },
+    {
+      "symbol": "BDFINANCE",
+      "change": {
+        "price": -44.10,
+        "percent": -100.00
+      },
+      "icon": {
+        "name": "fa-circle-down",
+        "type": "regular"
+      },
+      "infoClass": "red-ico"
+    },
+    {
+      "symbol": "1JANATAMF",
+      "change": {
+        "price": 0.00,
+        "percent": 0.00
+      },
+      "icon": {
+        "name": "fa-circle-up",
+        "type": "regular"
+      },
+      "infoClass": "green-ico"
+    },
+    {
+      "symbol": "1JANATAMF",
+      "change": {
+        "price": 0.00,
+        "percent": 0.00
+      },
+      "icon": {
+        "name": "fa-sort",
+        "type": "solid"
+      },
+      "infoClass": "green-ico"
+    },
+    {
+      "symbol": "BDFINANCE",
+      "change": {
+        "price": -44.10,
+        "percent": -100.00
+      },
+      "icon": {
+        "name": "fa-circle-down",
+        "type": "regular"
+      },
+      "infoClass": "red-ico"
+    },
+    {
+      "symbol": "1JANATAMF",
+      "change": {
+        "price": 0.00,
+        "percent": 0.00
+      },
+      "icon": {
+        "name": "fa-circle-up",
+        "type": "regular"
+      },
+      "infoClass": "green-ico"
+    },
+    {
+      "symbol": "1JANATAMF",
+      "change": {
+        "price": 0.00,
+        "percent": 0.00
+      },
+      "icon": {
+        "name": "fa-sort",
+        "type": "solid"
+      },
+      "infoClass": "green-ico"
+    }
+  ]
+}

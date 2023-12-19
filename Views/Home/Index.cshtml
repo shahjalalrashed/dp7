@@ -1,0 +1,517 @@
+﻿@{
+	ViewData["Title"] = "Home";
+}
+@section Styles {
+	<link rel="stylesheet" href="css/index.css" asp-append-version="true" />
+}
+
+<!-- ----------------------------------------- -->
+<!--                  Carosel                  -->
+<!-- ----------------------------------------- -->
+<div class="owl-carousel topslider owl-theme">
+	<!--<div class="item">
+		<img src="images/topslider/topslider1.png" alt="">
+	</div>
+	<div class="item">
+		<img src="images/topslider/topslider2.png" alt="">
+	</div>
+	<div class="item">
+		<img src="images/topslider/topslider3.png" alt="">
+	</div>
+	<div class="item">
+		<img src="images/topslider/topslider4.png" alt="">
+	</div>-->
+</div>
+
+<!-- ----------------------------------------- -->
+<!--            News and Market Price          -->
+<!-- ----------------------------------------- -->
+<section class="newsnmarket ptb60">
+	<div class="container">
+		<div class="row">
+			@* <div class="col-lg-4">
+				<div class="card brndcard mt-2 mb-2">
+					<div class="card-header">
+						<div class="tdaysnewswrap">
+							<div class="titletxt"><span class="fa-solid fa-newspaper icn"></span>Today's News</div>
+							<div class="titletxt"><a href="@Url.Action("News", "DSE")" class="allnewslnk"><span class="fa-solid fa-newspaper icn"></span>All News</a></div>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="vnewsTickerCon">
+							<div class="vnewsTicker">
+								<!-- <div class="vnewstickeritem"><strong>1STPRIMFMF :</strong> Tk. 375,654,243.39 on the basis of cost price after considering all assets and liabilities of the Fund.</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div> *@
+
+			<div class="col-lg-12 vnmvwrap">
+
+				<div class="vnt">
+					<div class="titletxt order-1 order-lg-1"><span class="fa-solid fa-newspaper icn"></span>Today's News</div>
+					<div class="vnewsTickerCon order-last order-lg-2">
+						<div class="vnewsTicker">
+							@* <div class="vnewstickeritem"><strong>1STPRIMFMF</strong> On the close of operation on November 30, 2023, the Fund has reported Net Asset Value (NAV) of Tk. 9.70 per unit on the basis of current market price and Tk. 11.14 per unit on the basis of cost price against face value of Tk. 10.00 whereas total Net Assets of the Fund stood at Tk. 2,813,291,806.00 on the basis of current market price and Tk. 3,228,650,609.00 on the basis of cost price after considering all assets and liabilities of the Fund.</div>*@
+						</div>
+					</div>
+					<div class="actwrap order-2 order-lg-last"><a href="@Url.Action("News", "DSE")" class="allnewslnk"><span class="fa-solid fa-newspaper icn"></span>All News</a></div>
+				</div>
+
+
+				@* <div class="card brndcard mb-4">
+					<div class="card-header">
+						<div class="tdaysnewswrap">
+							<div class="titletxt"><span class="fa-solid fa-newspaper icn"></span>Today's News</div>
+							<div class="titletxt"><a href="@Url.Action("News", "DSE")" class="allnewslnk"><span class="fa-solid fa-newspaper icn"></span>All News</a></div>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="vNewsTmvwrap">
+						</div>
+					</div>
+				</div> *@
+			</div>
+
+			<div class="col-lg-12">
+				<div class="card brndcard">
+					<div class="card-header">
+						<div class="markethighlight">
+							<div class="titletxt"><span class="fa-solid fa-chart-pie icn"></span> Market Highlights <a href="@Url.Action("Price", "DSE")" class="mpdlnk"><span class="fa-solid fa-up-right-from-square licn"></span></a></div>
+							<div class="titletxt">
+								@* <ul class="nav nav-pills" id="mhTab" role="tablist">
+									<li class="nav-item" role="presentation">
+										<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#priceTab" type="button" role="tab" aria-controls="priceTab" aria-selected="true">PRICE</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" data-bs-toggle="tab" data-bs-target="#changeTab" type="button" role="tab" aria-controls="changeTab" aria-selected="false">CHANGE</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" data-bs-toggle="tab" data-bs-target="#percentChangeTab" type="button" role="tab" aria-controls="percentChangeTab" aria-selected="false">% CHANGE</button>
+									</li>
+								</ul> *@
+							</div>
+						</div>
+					</div>
+					<div class="card-body ova">
+						@* <div class="tab-content" id="mhTabContent">
+							<div class="tab-pane fade show active" role="tabpanel">								
+							</div>
+						</div> *@
+						
+						<div class="vtTickerwrap">
+							<div class="vtblheader">
+								<div class="vtblhcont">
+									<div class="htitle">Trading Code</div>
+									<div class="htitle">Yesterday's Price</div>
+									<div class="htitle">Last Trade Price</div>
+									<div class="htitle">Close Price</div>
+									<div class="htitle">Change</div>
+									<div class="htitle">Change (%)</div>
+								</div>
+							</div>
+							<div class="vtblTickerCon">
+								<div class="vtblTicker">
+									@* <div class="tblTickerItem">
+									<div class="tblTickerItemcont">1JANATAMF</div>
+									<div class="tblTickerItemcont"><span class="fa-solid fa-bangladeshi-taka-sign icn"></span>6.10</div>
+									<div class="tblTickerItemcont"><span class="fa-solid fa-bangladeshi-taka-sign icn"></span>0.00</div>
+									<div class="tblTickerItemcont"><span class="fa-solid fa-bangladeshi-taka-sign icn"></span>0.00</div>
+									<div class="tblTickerItemcont"><span class="fa-solid fa-arrow-up-arrow-down icn"></span>0.00</div>
+									<div class="tblTickerItemcont"><span class="fa-solid fa-percent icn"></span>-100.00</div>
+									</div> *@
+								</div>
+							</div>
+							<div class="vstblactwrap">
+								<button class="btn" id="tablpptoggle"><i class="fa-solid fa-pause"></i></button>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+				
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ----------------------------------------- -->
+<!--                  About Dp7                -->
+<!-- ----------------------------------------- -->
+<section class="container ptb60 text-center">
+	<div class="sec-title">
+		<h2>ABOUT dp7 SECURITIES LTD.</h2>
+	</div>
+	<div class="sec-desc pt30" id="homeService">
+		<p>Baraka Securities Limited was incorporated in Bangladesh on March 11, 2021 as a Private Limited Company having its registered office at 6/A/1, Segunbagicha, Dhaka-1000. Baraka Securities Limited is a 51% subsidiary of Baraka Patenga Power Limited (BPPL). The principal activities of the Company are to carry on the business of brokers or dealers in stock, shares, securities, commercial papers, bonds, debentures etc. The Company applied to the Dhaka Stock Exchange Limited for obtaining a new Trading Right Entitlement Certificate (TREC) on March 28, 2021. Accordingly, the Dhaka Stock Exchange Limited provided its approval to the Company on May 30, 2021 vide their letter no. DSE/COM/TAD/LTR /Approval_New TREC/2021/1010-3259 and subsequently issued TREC to Baraka Securities Limited on September 1, 2021 which was formally handed over to the Company on September 4, 2021. Trading Right Entitlement Certificate Number of the Company is Registration/DSE/TREC # 274/2021/301</p>
+	</div>
+</section>
+
+<!-- ----------------------------------------- -->
+<!--                Our Service                -->
+<!-- ----------------------------------------- -->
+<section class="servsec ptb60">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="sec-title">
+					<h2>Our Services</h2>
+				</div>
+				<div class="sec-desc pt30">
+					<div class="serviceitem">
+						@* <a href="#" class="moderncard">
+							<div class="moderncard_content">
+								<div class="moderncard_icon">
+									<img class="foot-logo" src="~/images/services/dp-service.png" alt="">
+								</div>
+								<div class="moderncard_body">
+									<div class="service-title">DP SERVICE</div>
+								</div>
+							</div>
+							<div class="moderncard_layout"></div>
+						</a> *@						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+@section Scripts {
+    <script type="text/javascript">
+
+		// $(document).on("click", "#mhTab .nav-link", function () {
+		// 	$("#mhTab .nav-link").removeClass("active");
+
+		// 	$(this).addClass("active");
+
+		// 	var tabText = $(this).text();
+		// 	var dyncontab = "";
+
+		// 	if (tabText == "PRICE") {
+		// 		dyncontab = "This is the PRICE tab's content.";
+		// 	} else if (tabText == "CHANGE") {
+		// 		dyncontab = "This is the CHANGE tab's content.";
+		// 	} else if (tabText == "% CHANGE") {
+		// 		dyncontab = "This is the % CHANGE tab's content.";
+		// 	}
+
+		// 	$("#mhTabContent .tab-pane").html(dyncontab);
+		// });
+
+		// $("#mhTab .nav-link:first").trigger("click");
+			
+
+        $(document).ready(function () {
+			//owl carosel
+			$.getJSON("/data/owl.json").done(function (data) {
+				var varHtml = "";
+				$.each(data.images, function (i, d) {
+					console.log(data.images);
+					varHtml += `
+								<div class="item">
+									<img src="${d.url}" alt="">
+								</div>
+								`;
+				});
+
+				$(".topslider").append(varHtml);
+
+				var owl = $('.topslider');
+				owl.owlCarousel({
+					items: 1,
+					margin: 18,
+					loop: true,
+					nav: true,
+					autoplay: true,
+					autoplayTimeout: 4000,
+					autoplayHoverPause: true
+				});
+
+				owl.on('mousewheel', '.owl-stage', function (e) {
+					if (e.deltaY > 0) {
+						owl.trigger('next.owl');
+					} else {
+						owl.trigger('prev.owl');
+					}
+					e.preventDefault();
+				});
+			});
+
+
+
+			//services
+			$.getJSON("/data/servicecard.json").done(function (data) {
+				var varHtml = "";
+				$.each(data.serviceitems, function (i, d) {
+					varHtml += `
+								<a href="${d.moderncard.moderncard_content.moderncard_body["service-link"]}" class="moderncard">
+									<div class="moderncard_content">
+										<div class="moderncard_icon">
+											<img class="foot-logo" src="${d.moderncard.moderncard_content.moderncard_icon["foot-logo"]}" alt="">
+										</div>
+										<div class="moderncard_body">
+											<div class="service-title">${d.moderncard.moderncard_content.moderncard_body["service-title"]}</div>
+										</div>
+									</div>
+									<div class="moderncard_layout"></div>
+								</a>
+								`;
+				});
+				$(".serviceitem").html(varHtml);
+			});
+						
+			//vertical ticker
+			// $.getJSON("/data/verticalslidecont.json").done(function (data) {
+
+			// 	if (data.vnewsTicker.length == 0) {
+			// 		$(".vnewsTickerCon").html(`
+			// 									<div class="vnewsTickermessage">
+			// 										<span class="fa-solid fa-triangle-exclamation icn"></span>No news available.
+			// 									</div>
+			// 								`);
+			// 	} else {
+
+			// 		var varHtml = "";
+			// 		$.each(data.vnewsTicker, function (i, d) {
+			// 			varHtml += `
+			// 							<div class="vnewstickeritem">
+			// 								<strong>${d.company} :</strong> ${d.content}
+			// 							</div>
+			// 							`;
+			// 		});
+
+			// 		$(".vnewsTicker").html(varHtml);
+
+			// 		var newsNum = $(".vnewsTicker").length;
+			// 		var totalNews_H = 0;
+			// 		for (var i = 0; i < newsNum; i++) {
+			// 			var news_H = $(".vnewsTicker").eq(i).outerHeight(true);
+			// 			totalNews_H = totalNews_H + news_H;
+			// 		}
+
+			// 		$(".vnewsTicker").css('height', totalNews_H + 'px');
+
+			// 		var speed = 0.6, animAmount, animInterval;
+
+			// 		vanimateNews();
+
+			// 		function vanimateNews() {
+			// 			$(".vnewsTicker").eq(0).animate({
+			// 				'marginTop': '-=' + speed + 'px'
+			// 			}, 1, function () {
+			// 				animAmount = speed;
+			// 				var animNews_H = $(".vnewsTicker").eq(0).outerHeight(true);
+			// 				if (animAmount >= animNews_H - 345) {
+			// 					$(this).parent().append($(this));
+			// 					$(this).removeAttr('style');
+			// 				}
+
+			// 				animInterval = setTimeout(function () {
+			// 					vanimateNews();
+			// 				}, 1);
+			// 			});
+			// 		}
+
+			// 		$(".vnewsTicker").hover(function () {
+			// 			clearTimeout(animInterval);
+			// 			$(".vnewsTicker").eq(0).stop();
+			// 		}, function () {
+			// 			vanimateNews();
+			// 		});
+				
+			// 	}
+			// }).fail(function () {
+			// 	$(".vnewsTickerCon").html(`
+			// 								<div class="vnewsTickermessage">
+			// 									<span class="fa-solid fa-triangle-exclamation icn"></span> No news available.
+			// 								</div>
+			// 								`);
+			// });
+
+
+
+			// var vnewsspeed = 1, animAmount, animInterval;
+			// var ml = window.outerWidth;
+
+			// vanimateNews();
+
+			// function vanimateNews() {
+			// 	$(".vnewsTicker").eq(0).animate({
+			// 		'marginLeft': window.innerWidth <= 991 ? 0 : '-=' + vnewsspeed + 'px',
+			// 		'marginTop': window.innerWidth <= 991 ? '-=' + vnewsspeed + 'px' : 0
+			// 	}, 1, function () {
+			// 		animAmount = vnewsspeed;
+			// 		var animNews_W = $(".vnewsTicker").eq(0).outerWidth(true);
+			// 		var animNews_H = $(".vnewsTicker").eq(0).outerHeight(true);
+
+			// 		if (animAmount >= animNews_W + ml || animAmount >= animNews_H) {
+			// 			$(this).parent().append($(this));
+			// 			$(this).removeAttr('style');
+			// 		}
+
+			// 		animInterval = setTimeout(function () {
+			// 			vanimateNews();
+			// 		}, 12);
+			// 	});
+			// }
+
+			// $(".vnewsTicker").hover(function () {
+			// 	clearTimeout(animInterval);
+			// 	$(".vnewsTicker").eq(0).stop();
+			// }, function () {
+			// 	vanimateNews();
+			// });
+
+
+
+			$.getJSON("/data/verticalslidecont.json").done(function (data) {
+				if (data.vnewsTicker.length == 0) {
+					$(".vnewsTickerCon").html(`
+						<div class="vnewsTickermessage">
+							<span class="fa-solid fa-triangle-exclamation icn"></span>No news available.
+						</div>
+					`);
+				} else {
+					var varHtml = "";
+					$.each(data.vnewsTicker, function (i, d) {
+						varHtml += `
+							<div class="vnewstickeritem">
+								<strong>${d.company}</strong> ${d.content}
+							</div>
+						`;
+					});
+
+					$(".vnewsTicker").html(varHtml);
+
+					var vnewsspeed = 1, animAmount, animInterval;
+					var cnt = 0;
+					var ml = window.innerWidth;
+					var mt = $(".vnewsTickerCon").height();
+
+					vanimateNews();
+
+					function vanimateNews() {
+						ml = ml - vnewsspeed;
+						mt = mt - vnewsspeed;
+						$(".vnewsTicker").eq(0).animate({
+							'marginLeft': window.innerWidth <= 991 ? 0 : ml + 'px',
+							'marginTop': window.innerWidth <= 991 ? mt + 'px' : 0
+						}, 1, function () {
+							animAmount = vnewsspeed;
+							var animNews_W = $(".vnewsTicker").eq(0).outerWidth(true);
+							var animNews_H = $(".vnewsTicker").eq(0).outerHeight(true);
+
+							if (animAmount >= animNews_W || animAmount >= animNews_H) {
+								ml = window.innerWidth;
+								mt = $(".vnewsTickerCon").height();
+							}
+
+							animInterval = setTimeout(function () {
+								vanimateNews();
+							}, 12);
+						});
+					}
+
+					$(".vnewsTicker").hover(function () {
+						clearTimeout(animInterval);
+						$(".vnewsTicker").eq(0).stop();
+					}, function () {
+						vanimateNews();
+					});
+				}
+			}).fail(function () {
+				$(".vnewsTickerCon").html(`
+					<div class="vnewsTickermessage">
+						<span class="fa-solid fa-triangle-exclamation icn"></span> No news available.
+					</div>
+				`);
+			});
+
+
+
+
+			//vertical Table ticker
+			$.getJSON("/data/verticaltableecont.json").done(function (data) {
+				var tblHtml = "";
+				$.each(data.vtblTicker, function (i, d) {
+					tblHtml += `
+								<div class="tblTickerItem">
+									<div class="tblTickerItemcont">${d.tblTickerItem.company}</div>
+									<div class="tblTickerItemcont"><span class="fa-solid fa-bangladeshi-taka-sign icn"></span>${d.tblTickerItem.value1.toFixed(2)}</div>
+									<div class="tblTickerItemcont"><span class="fa-solid fa-bangladeshi-taka-sign icn"></span>${d.tblTickerItem.value2.toFixed(2)}</div>
+									<div class="tblTickerItemcont"><span class="fa-solid fa-bangladeshi-taka-sign icn"></span>${d.tblTickerItem.value3.toFixed(2)}</div>
+									<div class="tblTickerItemcont ${d.tblTickerItem.value4 < 0 ? 'txtred' : (d.tblTickerItem.value4 > 0 ? 'txtgreen' : '')}"><span class="fa-solid fa-arrow-up-arrow-down icn"></span>${d.tblTickerItem.value4.toFixed(2)}</div>
+									<div class="tblTickerItemcont ${d.tblTickerItem.value5 < 0 ? 'txtred' : (d.tblTickerItem.value5 > 0 ? 'txtgreen' : '')}"><span class="fa-solid fa-percent icn"></span>${d.tblTickerItem.value5.toFixed(2)}</div>
+								</div>
+								`;
+				});
+
+				$(".vtblTicker").html(tblHtml);
+
+				var tblnewsNum = $(".vtblTicker").length;
+				var tbltotalNews_H = 0;
+
+				for (var i = 0; i < tblnewsNum; i++) {
+					var news_H = $(".vtblTicker").eq(i).outerHeight(true);
+					tbltotalNews_H = tbltotalNews_H + news_H;
+				}
+
+				$(".vtblTicker").css('height', tbltotalNews_H + 'px');
+
+				var speed = 1, animAmount, animInterval;
+				var isPaused = false;
+
+				vanimateTabledata();
+
+				function vanimateTabledata() {
+					if (!isPaused) {
+						$(".vtblTicker").eq(0).animate({
+							'marginTop': '-=' + speed + 'px'
+						}, 1, function () {
+							animAmount = speed;
+							var animNews_H = $(".vtblTicker").eq(0).outerHeight(true);
+
+							if (animAmount >= animNews_H - 290) {
+								$(this).parent().append($(this));
+								$(this).removeAttr('style');
+							}
+
+							animInterval = setTimeout(function () {
+								vanimateTabledata();
+							}, 20);
+						});
+					}
+				}
+
+				$(".vtblTicker").hover(function () {
+					clearTimeout(animInterval);
+					$(".vtblTicker").eq(0).stop();
+				}, function () {
+					vanimateTabledata();
+				});
+
+				$(document).on("click", "#tablpptoggle", function () {
+					isPaused = !isPaused;
+					if (!isPaused) {
+						vanimateTabledata();
+						$("#tablpptoggle i").removeClass("fa-play").addClass("fa-pause");
+					} else {
+						$("#tablpptoggle i").removeClass("fa-pause").addClass("fa-play");
+					}
+				});
+
+			});
+
+
+
+
+		});
+    </script>
+}

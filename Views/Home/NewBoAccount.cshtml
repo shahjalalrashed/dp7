@@ -1,0 +1,614 @@
+﻿@{
+	ViewData["Title"] = "New Bo Account";
+}
+@section styles{
+	<link href="~/css/newboaccount.css" rel="stylesheet" />
+}
+
+<!-- ----------------------------------------- -->
+<!--               New Bo Account              -->
+<!-- ----------------------------------------- -->
+<section class="container ptb60 text-center">
+    <div class="sec-title">
+		<h2>New Bo Account</h2>
+    </div>
+    <div class="pt15 wizardstepwrap">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bs-wizard nav">
+                    <div class="bs-wizard-step active">
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="#binfo" class="bs-wizard-dot active" data-bs-toggle="tab"></a>
+                        <div class="bs-wizard-info text-center"><span class="fa-solid fa-circle-info icn"></span>Basic Information</div>
+                    </div>
+
+                    <div class="bs-wizard-step disabled">
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="#fainfo" class="bs-wizard-dot" data-bs-toggle="tab"></a>
+                        <div class="bs-wizard-info text-center"><span class="fa-solid fa-list icn"></span>First Applicant Information</div>
+                    </div>
+
+                    <div class="bs-wizard-step disabled">
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="#bnkinfo" class="bs-wizard-dot" data-bs-toggle="tab"></a>
+                        <div class="bs-wizard-info text-center"><span class="fa-solid fa-building-columns icn"></span>Bank Information (First Applicant)</div>
+                    </div>
+
+                    <div class="bs-wizard-step disabled d-none" id="japp">
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="#jainfo" class="bs-wizard-dot" data-bs-toggle="tab"></a>
+                        <div class="bs-wizard-info text-center"><span class="fa-solid fa-user-group icn"></span>Joint Applicant Information</div>
+                    </div>
+
+                    <div class="bs-wizard-step disabled">
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="#ninfo" class="bs-wizard-dot" data-bs-toggle="tab"></a>
+                        <div class="bs-wizard-info text-center"><span class="fa-solid fa-id-badge icn"></span>Nominee Information</div>
+                    </div>
+
+                    <div class="bs-wizard-step disabled">
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="#poainfo" class="bs-wizard-dot" data-bs-toggle="tab"></a>
+                        <div class="bs-wizard-info text-center"><span class="fa-solid fa-street-view icn"></span>Power of Attorney Information (optional)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="binfo">
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-6">
+                                <label for="accounttype" class="form-label required">Account Type</label>
+                                <select class="form-select" id="accounttype">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Your Account Type</option>
+                                    <option value="single">Single</option>
+                                    <option value="joint">Joint</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="introducer" class="form-label">Introducer</label>
+                                <select class="form-select" id="introducer">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Introducer</option>
+                                    <option value="1">1 - MOHAMMED ENAMUL KABIR</option>
+                                    <option value="10">10 - MOHAMMAD NURUZZAMAN BHUIYAN</option>
+                                    <option value="11">11 - MD MONJURUL ALAM CHY</option>
+                                    <option value="64">13 - Md Raju</option>
+                                    <option value="65">14 - Shimul Das</option>
+                                    <option value="2">2 - MD MAHABUBUL HOQUE</option>
+                                    <option value="3">3 - ZAHIDUL ISLAM</option>
+                                    <option value="4">4 - SULTANA AKTER</option>
+                                    <option value="5">5 - MASUMA AKTER</option>
+                                    <option value="6">6 - SHAMIM M.A. MALEK</option>
+                                    <option value="63">63 - Online</option>
+                                    <option value="7">7 - MOHAMMAD ASRAFUL MOWLA BHUIYAN</option>
+                                    <option value="8">8 - MD. ISMAIL</option>
+                                    <option value="9">9 - SYED IMDAD ULLAH</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-lg-12 d-flex justify-content-end">
+                                <button type="button" class="btn btn-brand nextstep">Next <span class="fa-solid fa-angle-right"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="fainfo">
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-2">
+                                <label for="fainame" class="form-label required">Name</label>
+                                <select class="form-select" id="fainame">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Mr./Ms.</option>
+                                    <option value="mr">Mr.</option>
+                                    <option value="ms">Ms.</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-5">
+                                <label for="ifname" class="form-label blanklbl">&nbsp;</label>
+                                <input id="ifname" type="text" class="form-control" placeholder="Investor's First Name">
+                            </div>
+                            <div class="col-lg-5">
+                                <label for="ilname" class="form-label blanklbl">&nbsp;</label>
+                                <input id="ilname" type="text" class="form-control" placeholder="Investor's Last Name">
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-3">
+                                <label for="fohname" class="form-label required">Father's/Husband's Name</label>
+                                <select class="form-select" id="fohname">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Father's/Husband's Name</option>
+                                    <option value="mr">Father's Name</option>
+                                    <option value="ms">Husband's Name</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-5">
+                                <label for="ifname" class="form-label blanklbl">&nbsp;</label>
+                                <input id="ifname" type="text" class="form-control" placeholder="Enter the Name">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="mname" class="form-label required">Mother's Name</label>
+                                <input id="mname" type="text" class="form-control" placeholder="Enter Your Mother's Name">
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-3">
+                                <label for="dobirth" class="form-label required">Date of Birth</label>
+                                <input type="text" id="dobirth" class="form-control DateInput check-date" placeholder="Date of Birth">
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="ocupation" class="form-label">Occupation</label>
+                                <select id="ocupation" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Your Occupation</option>
+                                    <option value="1">Service Holder</option>
+                                    <option value="2">Programming</option>
+                                    <option value="3">Housewife</option>
+                                    <option value="4">Engineer</option>
+                                    <option value="5">Business</option>
+                                    <option value="6">Student</option>
+                                    <option value="7">Teaching</option>
+                                    <option value="8">Doctor</option>
+                                    <option value="9">Nursing</option>
+                                    <option value="10">Lawer</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="gend" class="form-label">Gender</label>
+                                <select id="gend" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Your Gender</option>
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="marstatus" class="form-label">Martial Status</label>
+                                <select id="marstatus" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Your Martial Status</option>
+                                    <option value="1">Single</option>
+                                    <option value="2">Married</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-6">
+                                <label for="ponid" class="form-label">Passport/NID</label>
+                                <select id="ponid" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Passport/NID</option>
+                                    <option value="1">Passport</option>
+                                    <option value="2">NID</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="passonidid" class="form-label">Passport/NID Issue Date</label>
+                                <input type="text" id="passonidid" class="form-control DateInput check-date" placeholder="Passport/NID Issue Date">
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-4">
+                                <label for="sodiv" class="form-label required">State/Division</label>
+                                <select id="sodiv" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Your Division</option>
+                                    <option value="1">Dhaka</option>
+                                    <option value="2">Barisal</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="city" class="form-label required">City</label>
+                                <select id="city" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Your City</option>
+                                    <option value="1">Dhaka</option>
+                                    <option value="2">Barisal</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="zopcode" class="form-label required">ZIP/Post Code</label>
+                                <input type="text" id="zopcode" class="form-control" placeholder="Enter the ZIP/Post Code">
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-2">
+                                <label for="caddress" class="form-label">Contact Address</label>
+                                <select id="caddress" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select</option>
+                                    <option value="1">NID</option>
+                                    <option value="2">Passport</option>
+                                    <option value="3">Utility</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-10">
+                                <label for="cadd" class="form-label blank">&nbsp;</label>
+                                <textarea id="cadd" class="form-control" rows="1" placeholder="Enter Contact Address"></textarea>
+                            </div>
+                            <div class="col-lg-2">
+                                <label for="paddress" class="form-label">Present Address</label>
+                                <select id="paddress" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select</option>
+                                    <option value="1">NID</option>
+                                    <option value="2">Passport</option>
+                                    <option value="3">Utility</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-10">
+                                <label for="padd" class="form-label blank">&nbsp;</label>
+                                <textarea id="padd" class="form-control" rows="1" placeholder="Enter Present Address"></textarea>
+                            </div>
+                            <div class="col-lg-2">
+                                <label for="peraddress" class="form-label">Permanent Address</label>
+                                <select id="peraddress" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select</option>
+                                    <option value="1">NID</option>
+                                    <option value="2">Passport</option>
+                                    <option value="3">Utility</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-10">
+                                <label for="peradd" class="form-label blank">&nbsp;</label>
+                                <textarea id="peradd" class="form-control" rows="1" placeholder="Enter Permanent Address"></textarea>
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="tiany" class="form-label">TIN (if any)</label>
+                                <textarea id="tiany" class="form-control" rows="1" placeholder="TIN (optional)"></textarea>
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-6">
+                                <label for="pmnum" class="form-label required">Mobile Number</label>
+                                <input type="text" id="pmnum" class="form-control" placeholder="Primary Mobile Number">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="secmnum" class="form-label blank">&nbsp;</label>
+                                <input type="text" id="secmnum" class="form-control" placeholder="Secondary Mobile Number (optional)">
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-6">
+                                <label for="pemail" class="form-label">Email Address</label>
+                                <input type="text" id="pemail" class="form-control" placeholder="Primary Email Address">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="secemail" class="form-label blank">&nbsp;</label>
+                                <input type="text" id="secemail" class="form-control" placeholder="Secondary Email Address">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 d-flex justify-content-between">
+                            <button type="button" class="btn btn-brand previousstep"><span class="fa-solid fa-angle-left"></span> Previous</button>
+                            <button type="button" class="btn btn-brand nextstep">Next <span class="fa-solid fa-angle-right"></span></button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="bnkinfo">
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-4">
+                                <label for="bank" class="form-label required">Bank</label>
+                                <select id="bank" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Bank</option>
+                                    <option value="bank1">Bank 1</option>
+                                    <option value="bank2">Bank 2</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="bbranch" class="form-label required">Bank Branch</label>
+                                <select id="bbranch" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Bank Branch</option>
+                                    <option value="branc1">Branch 1</option>
+                                    <option value="branch2">Branch 2</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="accnum" class="form-label required">Account Number</label>
+                                <input type="text" id="accnum" class="form-control" placeholder="Enter Your Acoount Number">
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-lg-12 d-flex justify-content-between">
+                                <button type="button" class="btn btn-brand previousstep"><span class="fa-solid fa-angle-left"></span> Previous</button>
+                                <button type="button" class="btn btn-brand nextstep">Next <span class="fa-solid fa-angle-right"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="jainfo">
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-3">
+                                <label for="jaccname" class="form-label required">Name</label>
+                                <select id="jaccname" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Mr./Ms.</option>
+                                    <option value="Mr">Mr.</option>
+                                    <option value="Ms.">Ms.</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-9">
+                                <label for="jhname" class="form-label blanklbl">&nbsp;</label>
+                                <input type="text" id="jhname" class="form-control" placeholder="Joint Holder Name">
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-3">
+                                <label for="fojhname" class="form-label required">Father's/Husband's Name</label>
+                                <select class="form-select" id="fojhname">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Father's/Husband's Name</option>
+                                    <option value="mr">Father's Name</option>
+                                    <option value="ms">Husband's Name</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-5">
+                                <label for="jhifname" class="form-label blanklbl">&nbsp;</label>
+                                <input id="jhifname" type="text" class="form-control" placeholder="Enter the Name">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="jhmname" class="form-label required">Mother's Name</label>
+                                <input id="jhmname" type="text" class="form-control" placeholder="Joint Holder Mother's Name">
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-6">
+                                <label for="jadobirth" class="form-label required">Date of Birth</label>
+                                <input type="text" id="jadobirth" class="form-control DateInput check-date" placeholder="Date of Birth">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="jaocupation" class="form-label">Occupation</label>
+                                <select id="jaocupation" class="form-select">
+                                    <option class="first-option" value="0" selected="" disabled="" style="display: none;">Joint Holder Occupation</option>
+                                    <option value="1">Service Holder</option>
+                                    <option value="2">Programming</option>
+                                    <option value="3">Housewife</option>
+                                    <option value="4">Engineer</option>
+                                    <option value="5">Business</option>
+                                    <option value="6">Student</option>
+                                    <option value="7">Teaching</option>
+                                    <option value="8">Doctor</option>
+                                    <option value="9">Nursing</option>
+                                    <option value="10">Lawer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-4">
+                                <label for="jancadd" class="form-label">Contact Address</label>
+                                <input type="text" id="jancadd" class="form-control" placeholder="Joint Holder Contact Address">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="janmobnum" class="form-label required">Mobile Number</label>
+                                <input type="text" id="janmobnum" class="form-control" placeholder="Joint Holder Mobile Number">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="janemadd" class="form-label">Email Address</label>
+                                <input type="text" id="janemadd" class="form-control" placeholder="Joint Holder Email Address">
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-lg-12 d-flex justify-content-between">
+                                <button type="button" class="btn btn-brand previousstep"><span class="fa-solid fa-angle-left"></span> Previous</button>
+                                <button type="button" class="btn btn-brand nextstep">Next <span class="fa-solid fa-angle-right"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="ninfo">
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-4">
+                                <label for="nname" class="form-label">Nominee Name</label>
+                                <input type="text" id="nname" class="form-control" placeholder="Nominee Name">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="rwinves" class="form-label">Relationship with Investor</label>
+                                <select id="rwinves" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Relationhip</option>
+                                    <option value="15">Sister</option>
+                                    <option value="16">Friend</option>
+                                    <option value="17">Wife</option>
+                                    <option value="18">Aunti</option>
+                                    <option value="19">Daughter</option>
+                                    <option value="20">Husband</option>
+                                    <option value="21">Brother-in-law</option>
+                                    <option value="22">Father</option>
+                                    <option value="23">Brother</option>
+                                    <option value="24">Son</option>
+                                    <option value="25">Uncle</option>
+                                    <option value="26">Mother</option>
+                                    <option value="27">Nephew</option>
+                                    <option value="28">Cousin</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="acnumber" class="form-label required">Account Number</label>
+                                <input type="text" id="acnumber" class="form-control" placeholder="Account Number">
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-6">
+                                <label for="ndobirth" class="form-label">Date of Birth</label>
+                                <input type="text" id="ndobirth" class="form-control DateInput check-date" placeholder="Date of Birth">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="nnidop" class="form-label">NID/Passport</label>
+                                <input type="text" id="nnidop" class="form-control" placeholder="Nominee NID or Passport">
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-4">
+                                <label for="ncadd" class="form-label">Contact Address</label>
+                                <input type="text" id="ncadd" class="form-control" placeholder="Nominee Contact Address">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="nmobnum" class="form-label required">Mobile Number</label>
+                                <input type="text" id="nmobnum" class="form-control" placeholder="Nominee Mobile Number">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="nemadd" class="form-label">Email Address</label>
+                                <input type="text" id="nemadd" class="form-control" placeholder="Nominee Email Address">
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-lg-12 d-flex justify-content-between">
+                                <button type="button" class="btn btn-brand previousstep"><span class="fa-solid fa-angle-left"></span> Previous</button>
+                                <button type="button" class="btn btn-brand nextstep">Next <span class="fa-solid fa-angle-right"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="poainfo">
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-6">
+                                <label for="poaname" class="form-label">POA Name</label>
+                                <input type="text" id="poaname" class="form-control" placeholder="Power of Attorney Name">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="rwtinv" class="form-label">Relationship with Investor</label>
+                                <select id="rwtinv" class="form-select">
+                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Relationhip</option>
+                                    <option value="15">Sister</option>
+                                    <option value="16">Friend</option>
+                                    <option value="17">Wife</option>
+                                    <option value="18">Aunti</option>
+                                    <option value="19">Daughter</option>
+                                    <option value="20">Husband</option>
+                                    <option value="21">Brother-in-law</option>
+                                    <option value="22">Father</option>
+                                    <option value="23">Brother</option>
+                                    <option value="24">Son</option>
+                                    <option value="25">Uncle</option>
+                                    <option value="26">Mother</option>
+                                    <option value="27">Nephew</option>
+                                    <option value="28">Cousin</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-6">
+                                <label for="poadobirth" class="form-label">Date of Birth</label>
+                                <input type="text" id="poadobirth" class="form-control DateInput check-date" placeholder="Date of Birth">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="poaponid" class="form-label">NID/Passport</label>
+                                <input type="text" id="poaponid" class="form-control" placeholder="Power of Attorney NID/Pssport">
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-4">
+                                <label for="poacadd" class="form-label">Contact Address</label>
+                                <input type="text" id="poacadd" class="form-control" placeholder="Power of Attorney Contact Address">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="poamobnum" class="form-label required">Mobile Number</label>
+                                <input type="text" id="poamobnum" class="form-control" placeholder="Power of Attorney Mobile Number">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="poaemadd" class="form-label">Email Address</label>
+                                <input type="text" id="poaemadd" class="form-control" placeholder="Power of Attorney Email Address">
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-lg-5">
+                                <label for="poaedfrom" class="form-label">Effective Date From</label>
+                                <input type="text" id="poaedfrom" class="form-control DateInput check-date" placeholder="Effective Date From">
+                            </div>
+                            <div class="col-lg-2">
+                                <label for="disto" class="form-label blank">&nbsp;</label>
+                                <input type="text" class="form-control text-center" value="TO" disabled="">
+                            </div>
+                            <div class="col-lg-5">
+                                <label for="poaedto" class="form-label blank">&nbsp;</label>
+                                <input type="text" id="poaedto" class="form-control" placeholder="Effective Date To">
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-lg-12 d-flex justify-content-between">
+                                <button type="button" class="btn btn-brand previousstep"><span class="fa-solid fa-angle-left"></span> Previous</button>
+                                <button type="button" class="btn btn-brand finish">Finish <span class="fa-solid fa-angle-right"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>	
+</section>
+
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            $("#dobirth, #passonidid, #ndobirth, #poadobirth, #poaedfrom, #poaedto, #jadobirth").datepicker(
+                {
+                    changeYear: true,
+                    changeMonth: true,
+                    yearRange: "-70:+40",
+                    maxDate: "+40Y",
+                    minDate: "-85Y",
+                    dateFormat: 'dd/mm/yy'
+                });
+        });        
+
+		$(document).ready(function () {
+
+            $(document).on("click", ".bs-wizard-dot", function () {
+                var clickedStep = $(this).closest('.bs-wizard-step');
+
+                $(".bs-wizard-step").removeClass("active complete disabled");
+
+                clickedStep.addClass("active");
+
+                clickedStep.prevAll(".bs-wizard-step").addClass("complete");
+
+                clickedStep.nextAll(".bs-wizard-step").addClass("disabled");
+
+                var tabLink = $(this).siblings("a[data-bs-toggle='tab']");
+                if (tabLink.length > 0) {
+                    tabLink.tab('show');
+                }
+            });
+
+            $(document).on("click", ".nextstep", function () {
+                var currentStep = $(".bs-wizard-step.active");
+                var nextStep = currentStep.next(".bs-wizard-step");
+
+                while (nextStep.length > 0 && nextStep.hasClass("d-none")) {
+                    nextStep = nextStep.next(".bs-wizard-step:not(.d-none)");
+                }
+
+                if (nextStep.length > 0) {
+                    currentStep.removeClass("active complete");
+                    nextStep.addClass("active");
+                    nextStep.prevAll(".bs-wizard-step").addClass("complete").removeClass("disabled");
+
+                    var tabLink = nextStep.find("a[data-bs-toggle='tab']");
+                    if (tabLink.length > 0) {
+                        tabLink.tab('show');
+                    }
+                }
+            });
+
+            $(document).on("click", ".previousstep", function () {
+                var currentStep = $(".bs-wizard-step.active");
+                var prevStep = currentStep.prev(".bs-wizard-step");
+
+                while (prevStep.length > 0 && prevStep.hasClass("d-none")) {
+                    prevStep = prevStep.prev(".bs-wizard-step:not(.d-none)");
+                }
+
+                if (prevStep.length > 0) {
+                    currentStep.removeClass("active complete").addClass("disabled");
+                    prevStep.addClass("active").removeClass("complete disabled");
+
+                    var tabLink = prevStep.find("a[data-bs-toggle='tab']");
+                    if (tabLink.length > 0) {
+                        tabLink.tab('show');
+                    }
+                }
+            });
+
+            $(document).on("click", ".finish", function () {
+                var lastStep = $(".bs-wizard-step:last-child");
+                lastStep.removeClass("disabled").addClass("complete active");
+            });
+
+            $(document).on("change", "#accounttype", function () {
+                var selectedOption = $(this).val();
+                if (selectedOption == "joint") {
+                    $("#japp").removeClass("d-none");
+                } else {
+                    $("#japp").addClass("d-none");
+                }
+            });
+							
+		});
+    </script>
+ }

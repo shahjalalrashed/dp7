@@ -1,0 +1,137 @@
+﻿@{
+    ViewData["Title"] = "MARKET PRICE";
+}
+
+@section styles{
+    <link href="~/css/marketprice.css" rel="stylesheet" />
+}
+
+<!-- ----------------------------------------- -->
+<!--               MARKET PRICE                -->
+<!-- ----------------------------------------- -->
+<section class="container ptb60 text-center">
+    <div class="sec-title">
+        <h2>MARKET PRICE</h2>
+    </div>
+
+    <div class="sec-desc pt30">
+        <div class="mpcontwrap">
+            <div class="mpheading">
+                <div class="row">
+                    <div class="col-lg-1">
+                        <span class="fa-solid fa-circle-info"></span>
+                    </div>
+                    <div class="col-lg-11">
+                        <div class="row">
+                            <div class="col-lg-2">Trading Code</div>
+                            <div class="col-lg-2">Yesterday's Price</div>
+                            <div class="col-lg-2">Last Trade Price</div>
+                            <div class="col-lg-2">Close Price</div>
+                            <div class="col-lg-2">Change</div>
+                            <div class="col-lg-2">Change (%)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mpcont"> 
+                @* <div class="mpcontcard">
+                    <div class="row">
+                        <div class="col-lg-1 col-12">
+                            <span class="serial">1</span>
+                        </div>
+                        <div class="col-lg-11 contbottom">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="cbItem" data-label="Trading Code">
+                                        <span class="fa-solid fa-hashtag icn"></span>1JANATAMF
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="cbItem" data-label="Yesterday's Price">
+                                        <span class="fa-solid fa-bangladeshi-taka-sign icn"></span>6.10
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="cbItem" data-label="Last Trade Price">
+                                        <span class="fa-solid fa-bangladeshi-taka-sign icn"></span>0.00
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="cbItem" data-label="Close Price">
+                                        <span class="fa-solid fa-bangladeshi-taka-sign icn"></span>0.00
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 ${d.mpcontcard.value4 < 0 ? 'txtred' : (d.mpcontcard.value4 > 0 ? 'txtgreen' : '')}">
+                                    <div class="cbItem" data-label="Change">
+                                        <span class="fa-solid fa-arrow-up-arrow-down icn"></span>0.00
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 ${d.mpcontcard.value5 < 0 ? 'txtred' : (d.mpcontcard.value5 > 0 ? 'txtgreen' : '')}">
+                                    <div class="cbItem" data-label="Percent Change">
+                                        <span class="fa-solid fa-percent icn"></span>-100.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> *@
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section scripts{
+    <script type="text/javascript">
+        $.getJSON("/data/marketprice.json").done(function (data) {
+            var cardHtml = "";
+            $.each(data.mpcont, function (i, d) {
+                cardHtml += `
+                            <div class="mpcontcard">
+                                <div class="row">
+                                    <div class="col-lg-1 col-12">
+                                        <span class="serial">${d.mpcontcard.serial}</span>
+                                    </div>
+                                    <div class="col-lg-11 contbottom">
+                                        <div class="row">
+                                            <div class="col-lg-2">
+                                                <div class="cbItem" data-label="Trading Code">
+                                                    <span class="fa-solid fa-hashtag icn"></span>${d.mpcontcard.company}
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <div class="cbItem" data-label="Yesterday's Price">
+                                                    <span class="fa-solid fa-bangladeshi-taka-sign icn"></span>${d.mpcontcard.value1.toFixed(2)}
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <div class="cbItem" data-label="Last Trade Price">
+                                                    <span class="fa-solid fa-bangladeshi-taka-sign icn"></span>${d.mpcontcard.value2.toFixed(2)}
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <div class="cbItem" data-label="Close Price">
+                                                    <span class="fa-solid fa-bangladeshi-taka-sign icn"></span>${d.mpcontcard.value3.toFixed(2)}
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 ${d.mpcontcard.value4 < 0 ? 'txtred' : (d.mpcontcard.value4 > 0 ? 'txtgreen' : '')}">
+                                                <div class="cbItem" data-label="Change">
+                                                    <span class="fa-solid fa-arrow-up-arrow-down icn"></span>${d.mpcontcard.value4.toFixed(2)}
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 ${d.mpcontcard.value5 < 0 ? 'txtred' : (d.mpcontcard.value5 > 0 ? 'txtgreen' : '')}">
+                                                <div class="cbItem" data-label="Percent Change">
+                                                    <span class="fa-solid fa-percent icn"></span>${d.mpcontcard.value5.toFixed(2)}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            `;
+            });
+
+            $(".mpcont").html(cardHtml);
+        });
+    </script>
+ }

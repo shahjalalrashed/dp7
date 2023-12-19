@@ -1,0 +1,90 @@
+/*================================
+=       Board Of Directors       =
+================================*/
+.headingtxt {
+    font-weight: 700;
+}
+.bodcard {
+    text-align: left;
+    text-align-last: left;
+}
+.teamcard {
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.teamcard::before {
+    padding-top: calc(133.333% + 122px);
+    content: "";
+    display: block;
+}
+.teamcard_inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--lighashcolor);
+}
+.teamcard_bubble {
+    padding: 15px;
+    background-color: var(--brandcolor);
+    color: var(--bs-white);
+    line-height: 1.25;
+    position: relative;
+    min-height: 122px;
+}
+.teamcard_bubble .teamcardlnk {
+    color: var(--bs-white);
+    text-decoration: none;
+}
+.teamcard_bubble .teamcardlnk:hover {
+    text-decoration: underline;
+}
+.teamcard_name {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+}
+.teamcard_jobTitle {
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+.teamcard_bubbleFooter {
+    position: absolute;
+    top: 100%;
+    left: 18px;
+    right: 18px;
+    height: 32px;
+    z-index: 1;
+}
+.teamcard_bubbleTip {
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%);
+    fill: var(--brandcolor);
+}
+.teamcard_image {
+    display: block;
+    width: 100%;
+    filter: saturate(1);
+    transition: filter 150ms ease;
+    position: absolute;
+    bottom: 0px;
+}
+.teamcard:hover .teamcard_image {
+    filter: saturate(1.25);
+}
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 575px) {
+}
+/*===== End of Board Of Directors ======*/
+

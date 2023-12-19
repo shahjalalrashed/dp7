@@ -1,0 +1,92 @@
+﻿@{
+	ViewData["Title"] = "BOARD OF DIRECTORS PROFILE";
+}
+@section styles{
+    <link href="~/css/companyboardprofile.css" rel="stylesheet" />
+
+	<style type="text/css">
+	</style>
+}
+
+<!-- ----------------------------------------- -->
+<!--         Board Of Directors Profile        -->
+<!-- ----------------------------------------- -->
+<section class="container ptb60 dprofile">
+    <div class="row d-flex g-4" id="boardDetailsContainer">
+        <div class="col-lg-4 align-self-center">
+            <img class="img-fluid" src="~/images/BOD/GetImage.png" alt="" />
+        </div>
+        <div class="col-lg-8 align-self-center">
+            <h2 class="cp-name">Mr. Monzur Kadir Shafi</h2>
+            <h3 class="cp-des">Chairman</h3>
+        </div>
+        <div class="col-lg-12">
+            <div class="cp-card">                
+                <div class="contwsep">
+                    Mr. Monzur Kadir Shafi is a first generation entrepreneur who partnered with two other young business professionals at a young age to start a hospitality business in Hamtramck, Michigan, in 1998.
+                    <br>
+                    <br>
+                    Mr. Shafi, graduated in 1990. To sharpen his skills, he obtained multiple training in hospitality business on a global scale. His first venture into the business started in New York City where he quickly turned marketing skills into new business entrepreneurship and his ‘experiment’ in Michigan earned him credits and accolades from all including the Better Business Bureau of Michigan and Detroit News. His interest in US politics also allowed him to be known by notable politicians in Michigan, like Senator Carl Levin, Senator Gary Peters and US Congressmen Hansan Clark, John Conyers and others. His success in restaurant business, earned him an interview with CNN, which was telecasted globally.
+                    <br>
+                    <br>
+                    He belongs to a Muslim family in Sylhet. His father, Late Muhibur Rahman Chowdhury and his family also influenced him to be a successful business entrepreneur. But his desire to enter into Hospitality industry from a simple life in Sylhet to United States of America and to gain recognition in the society was purely because of his hard diligent work and his persistent in becoming successful.
+                    <br>
+                    <br>
+                    Mr. Shafi is a widely travelled personality and participated in different trainings &amp; seminars at home and abroad. He is a Director of Royal Educare Limited, that established two preschools in the name of Eurokids in the cities of Dhaka and Sylhet and also established The Royal Institute of Smart Education (RISE)-a premium International English Medium school in Sylhet City. Apart from these, Mr. Shafi is a member of the Trustee Board of North East University Bangladesh and also a Vice President of Bangladesh Scouts, Sylhet Region.
+                    <br>
+                    <br>
+                    Mr. Shafi believes in calculated risk taking, self-confidence, persuasion, innovation, the capacity to cope with challenges, hard work and commitment. These are the factors which contribute to the success of Mr. Shafi as an entrepreneur. He gives maximum importance to good judgement, time, cost &amp; quality management of the project he gets involved in. After obtaining diversified knowledge and experience in different field of business, he joined Baraka Patenga Power Limited (BPPL) as Project Director and by dint of his excelled was assigned the post of Deputy Managing Director &amp; Head of Finance of BPPL. Presently he is acting as the Managing Director of the Baraka Patenga Power Limited.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            let boardDetails;
+
+            $.getJSON("/data/companyboardprofile.json").done(function (data) {
+                boardDetails = data;
+                renderBoardDetails();
+            }).fail(function (jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.error("Error loading JSON: " + err);
+            });
+
+            function renderBoardDetails() {
+                var memberId = getQueryParam('id');
+                var formattedDescription = boardDetails[memberId].description.replace(/\n\n/g, '<br><br>');
+
+                if (memberId && boardDetails[memberId]) {
+                    var boardHtml = `
+                                <div class="col-lg-4 align-self-center">
+                                    <img class="img-fluid" src="${boardDetails[memberId].image}" alt="" />
+                                </div>
+                                <div class="col-lg-8 align-self-center">
+                                    <h2 class="cp-name">${boardDetails[memberId].name}</h2>
+                                    <h3 class="cp-des">${boardDetails[memberId].designation}</h3>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="cp-card">
+                                        <div class="contwsep">
+                                            ${formattedDescription}
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+
+                    $('#boardDetailsContainer').html(boardHtml);
+                } else {
+                    $('#boardDetailsContainer').html('<p>Member not found</p>');
+                }
+            }
+
+            function getQueryParam(name) {
+                var urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+        });
+    </script>
+ }

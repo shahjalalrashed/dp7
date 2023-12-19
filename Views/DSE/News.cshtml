@@ -1,0 +1,137 @@
+﻿@{
+    ViewData["Title"] = "LATEST NEWS";
+}
+
+@section styles{
+    <link href="~/css/news.css" rel="stylesheet" />
+}
+
+<!-- ----------------------------------------- -->
+<!--               LATEST NEWS                 -->
+<!-- ----------------------------------------- -->
+<section class="container ptb60 text-center">
+    <div class="sec-title">
+        <h2>LATEST NEWS</h2>
+    </div>
+
+    <div class="sec-desc pt-3">
+
+        <nav class="navbar navbar-expand-lg justify-content-end lnsecnav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#newsDaterFilter" aria-controls="newsDaterFilter" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa-solid fa-filter"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="newsDaterFilter">
+                <div class="card brndcard lnewssec mt-2 mb-2">
+					<div class="card-header">
+                        <div class="titletext">DATE FILTER</div>
+					</div>
+					<div class="card-body lnbottomcont">
+                        <div class="row g-3">
+                            <div class="col-lg-4">
+                                <label for="fromdate" class="form-label">From Date</label>
+                                <input type="text" id="fromdate" class="form-control DateInput check-date" placeholder="From Date">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="todate" class="form-label">To Date</label>
+                                <input type="text" id="todate" class="form-control DateInput check-date" placeholder="To Date">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="cmbCompanyMobile" class="form-label">Instrument</label>
+                                <select class="form-select" id="cmbCompanyMobile">
+                                    <option value="" class="first-option" style="display: none;">Select Instrument</option>
+                                    <option value="1JANATAMF">1JANATAMF</option>
+                                    <option value="1STBSRS">1STBSRS</option>
+                                    <option value="1STICB">1STICB</option>
+                                    <option value="1STICBUNITFUND">1STICBUNITFUND</option>
+                                    <option value="1STPRIMFMF">1STPRIMFMF</option>
+                                    <option value="2NDICB">2NDICB</option>
+                                    <option value="2NDICBUNITFUND">2NDICBUNITFUND</option>
+                                    <option value="3RDICB">3RDICB</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-12 d-flex justify-content-center">
+                                <button type="button" class="btn btn-brand"><span class="fa-solid fa-magnifying-glass icn"></span>Search</button>
+                            </div>
+                        </div>
+					</div>
+				</div>
+            </div>
+        </nav>
+
+    </div>
+
+    <div class="sec-desc pt-2 newsnmarket allnewscont">
+        @* <div class="anCard">
+            <div class="serialnumber">1</div>
+            <div class="newscont">
+                <div class="dntcodewrap">
+                    <div class="tradingcode"><span class="fa-solid fa-hashtag icn"></span> BANGAS</div>
+                    <div class="dtewrap"><span class="fa-solid fa-calendar-days icn"></span>11 Dec 2023</div>                                        
+                </div>
+                <div class="newstxt">Refer to the earlier news of the company disseminated on 26.10.2023 regarding dividend declaration, the Company has further informed that, due to unavoidable circumstances, the AGM of the Company will be held on December 30, 2023 at 10:00 AM on Virtual Platform instead of earlier declared date December 14, 2023. Link of AGM: https://agmbd.live/bangas2023</div>
+            </div>
+        </div> *@        
+    </div>
+
+</section>
+
+
+@section scripts{
+    <script type="text/javascript">
+
+        $.getJSON("/data/allnewscont.json").done(function (data) {
+            var cardHtml = "";
+            $.each(data.allnewscont, function (i, d) {
+                cardHtml += `
+                            <div class="anCard">
+                                <div class="serialnumber">${i + 1}</div>
+                                <div class="newscont">
+                                    <div class="dntcodewrap">
+                                        <div class="tradingcode"><span class="fa-solid fa-hashtag icn"></span> ${d.company}</div>
+                                        <div class="dtewrap"><span class="fa-solid fa-calendar-days icn"></span>${d.date}</div>
+                                    </div>
+                                    <div class="newstxt">${d.content}</div>
+                                </div>
+                            </div>
+                            `;
+            });
+
+            $(".allnewscont").html(cardHtml);
+
+        }).fail(function () {
+            $(".allnewscont").html(`
+                                    <div class="nonewserrmessage">
+                                        <span class="fa-solid fa-triangle-exclamation icn"></span> No news available.
+                                    </div>
+                                    `
+            );
+        });
+
+
+        $(function () {
+            $("#fromdate").datepicker(
+                {
+                    changeYear: true,
+                    changeMonth: true,
+                    yearRange: "-70:+40",
+                    maxDate: "+40Y",
+                    minDate: "-85Y",
+                    dateFormat: 'dd/mm/yy'
+                });
+            $("#todate").datepicker(
+                {
+                    changeYear: true,
+                    changeMonth: true,
+                    yearRange: "-70:+40",
+                    maxDate: "+40Y",
+                    minDate: "-85Y",
+                    dateFormat: 'dd/mm/yy'
+                });
+        });
+
+
+        $(document).ready(function () {
+
+        });
+    </script>
+ }

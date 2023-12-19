@@ -1,0 +1,499 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewData["Title"] - DP7 Ltd.</title>
+
+    <meta name="title" content="DP7 Ltd.">
+    <meta name="description" content="">
+
+    <!-- opengraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="DP7 Ltd.">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <link rel="icon" type="image/x-icon" href="~/images/favicon.png">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- css -->	
+	<link rel="stylesheet" href="~/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/sweetalert.css" />
+	<link rel="stylesheet" href="~/css/jquery-ui.min.css" />
+	<link rel="stylesheet" href="~/owlcarousel/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" href="~/owlcarousel/assets/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="~/css/common.css" />
+	@RenderSection("Styles", required: false)
+</head>
+
+
+
+<body>
+    <!--============================
+    =            header            =
+    =============================-->
+	<header class="sticky-top">
+		<div class="hwrap">
+			<div class="logonmenuwrap order-first order-lg-1">
+				<a href="@Url.Action("Index", "Home")"><img class="foot-logo" src="~/images/logo.png" alt=""></a>
+				<div class="actbtnmview"></div>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+			<div class="ibntwrap order-last order-lg-2">
+				<div class="ticker-container">
+					<div id="market_performance__ticker">
+						<ul id="tick">
+						</ul>
+						<div id="tick2"></div>
+					</div>
+				</div>
+				<div class="speedcwrapl">
+					<button id="speedUpBtn"><span class="fa-solid fa-angles-left"></span></button>
+				</div>
+				<div class="speedcwrapr">
+					<button id="speedDownBtn"><span class="fa-solid fa-angles-right"></span></button>
+				</div>
+				<div class="tawrap">
+					<button id="playPauseBtn"><span class="icn fa-solid fa-pause"></span></button>
+					<button id="toggleDirectionBtn"><span class="icn fa-solid fa-arrow-left"></span></button>
+					<button id="resetSpeedBtn"><span class="icn fa-solid fa-arrows-rotate"></span></button>
+				</div>
+			</div>
+			<nav class="navbar navbar-expand-lg navbcolor order-2 order-lg-last">
+				<div class="container-fluid">					
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav m-auto mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="@Url.Action("Index", "Home")"><span class="fa-solid fa-house icn"></span>Home</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<span class="fa-solid fa-newspaper icn"></span>About Us
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item" href="@Url.Action("CorporateProfile", "Home")"><span class="fa-solid fa-list-check icn"></span>Corporate profile</a></li>
+									<li><a class="dropdown-item" href="@Url.Action("CompanyAtAGlance", "Home")"><span class="fa-solid fa-eye icn"></span>Compliance Status</a></li>
+									<li><a class="dropdown-item" href="@Url.Action("CompanyBoard", "Home")"><span class="fa-solid fa-square-poll-horizontal icn"></span>Board of Director</a></li>
+									<li><a class="dropdown-item" href="#"><span class="fa-solid fa-square-poll-horizontal icn"></span>Senior Management Team</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<span class="fa-solid fa-newspaper icn"></span>Services
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">									
+									<li><a class="dropdown-item" href="@Url.Action("ServiceDetails", "Home")?id=1"><span class="fa-solid fa-list-check icn"></span>DP SERVICE</a></li>
+									<li><a class="dropdown-item" href="@Url.Action("ServiceDetails", "Home")?id=2"><span class="fa-solid fa-list-check icn"></span>BROKERAGE SERVICE</a></li>
+									<li><a class="dropdown-item" href="@Url.Action("ServiceDetails", "Home")?id=3"><span class="fa-solid fa-list-check icn"></span>IPO APPLICATION</a></li>
+									<li><a class="dropdown-item" href="@Url.Action("ServiceDetails", "Home")?id=4"><span class="fa-solid fa-list-check icn"></span>BSL RESEARCH</a></li>
+									<li><a class="dropdown-item" href="@Url.Action("ServiceDetails", "Home")?id=5"><span class="fa-solid fa-list-check icn"></span>CUSTODIAL SERVICE</a></li>
+									<li><a class="dropdown-item" href="@Url.Action("ServiceDetails", "Home")?id=6"><span class="fa-solid fa-list-check icn"></span>SME PLATFORM ACCESSE</a></li>
+									<li><a class="dropdown-item" href="@Url.Action("ServiceDetails", "Home")?id=7"><span class="fa-solid fa-list-check icn"></span>ONLINE SERVICES</a></li>
+									<li><a class="dropdown-item" href="@Url.Action("ServiceDetails", "Home")?id=8"><span class="fa-solid fa-list-check icn"></span>BONDS DEALING</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="@Url.Action("Downloads", "Home")" aria-disabled="true"><span class="fa-solid fa-download icn"></span>Downloads</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="@Url.Action("Contact", "Home")" aria-disabled="true"><span class="fa-solid fa-address-book icn"></span>Contact Us</a>
+							</li>
+						</ul>
+						<div class="actbtnwrap">
+							<div class="acc-btn">
+								<a href="#" class="btn-th me-2"><i class="fa fa-right-to-bracket icn"></i><span class="stxt">Login</span></a>
+								<a href="@Url.Action("NewBoAccount", "Home")" class="btn-th"><i class="fa fa-user-plus icn"></i><span class="stxt">New BO Account</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<!-- ----------------------------------------- -->
+	<!--                  Content                  -->
+	<!-- ----------------------------------------- -->
+	<main>
+	@RenderBody()
+	</main>
+    
+	<!--============================
+	=            footer            =
+	=============================-->
+	<footer>
+		<section class="footertop">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 order-3 order-lg-1">
+						<div class="row">
+							<div class="col-12 text-center text-sm-center text-lg-start order-2 order-lg-first">
+								<img class="foot-logo" src="~/images/logo.png" alt="">
+							</div>
+							<div class="col-12">
+								<div class="contact-info">
+									<div class="icnwrap">
+										<span class="fa-solid fa-phone icn"></span>
+									</div>
+									<div>Phone:  +88 02 47121574-5<br>Fax:  +88 02 57161105</div>
+								</div>
+								<div class="contact-info">
+									<div class="icnwrap">
+										<span class="fa-solid fa-envelope icn"></span>
+									</div>
+									<div>info@dp7securities.com</div>
+								</div>
+								<div class="contact-info">
+									<div class="icnwrap">
+										<span class="fa-solid fa-location-dot icn"></span>
+									</div>
+									<div>
+										<div>Al-haj Tower, 2nd Floor (Lift Level-01), 82 Motijheel C/A, Dhaka-1000.</div>
+									</div>
+								</div>
+								<div class="office-hour mt-4">
+									<div class="stitle">Office Hours</div>
+									<div class="dayntime">
+										<span class="day">Sun to Thu:</span>
+										<span class="time">9:00 AM to 4:30 PM</span>
+									</div>
+									<div class="dayntime">
+										<span class="day">Fri &amp; Sat:</span>
+										<span class="time">Closed</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-12 useful-links order-2 text-md-center text-center text-lg-start">
+						<div class="stitle">Useful Links</div>
+						<ul class="all-links">
+							<li><a class="lnk" href="https://www.dsebd.org/">Dhaka Stock Exchange (DSE)</a></li>
+							<li><a class="lnk" href="https://www.sec.gov.bd/">Bangladesh SEC (BSEC)</a></li>
+							<li><a class="lnk" href="https://www.cdbl.com.bd/">Central Depository (CDBL)</a></li>
+							<li><a class="lnk" href="https://www.bb.org.bd/en/index.php">Bangladesh Bank</a></li>
+							<li><a class="lnk" href="https://bicm.ac.bd/">Institute Of Capital Market (BICM)</a></li>
+						</ul>
+
+						<div class="social-linkswrap order-last">
+							<ul class="social-links">
+								<li class="slnkwrap"><a class="fb slnk" href="https://www.facebook.com/people/Baraka-Securities-Ltd/100083290119947/" target="_blank"><span class="fa-brands fa-facebook-f"></span></a></li>
+								<li class="slnkwrap"><a class="in slnk" href="https://www.linkedin.com/company/baraka-securities-ltd" target="_blank"><spani class="fa-brands fa-linkedin-in"></spani></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-6 order-first order-lg-last">
+						<iframe width="100%" height="300" allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58423.37992814857!2d90.37309465240169!3d23.766584140049837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bebdfbd1af7f%3A0x64e28cbb4851cf73!2sbarakasecurities!5e0!3m2!1sen!2sbd!4v1684406089411!5m2!1sen!2sbd"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="copyright">
+			<div class="copyText">
+				Copyright © <span id="copyDate">2023</span> DP7 Ltd. All Rights Reserved.
+			</div>
+			<div class="ucas">
+				<span>Development &amp; Maintenance by</span>
+				<a href="http://www.ucasbd.com/" target="_blank">
+					<img src="~/images/ucas-logo.svg">
+				</a>
+			</div>
+		</section>
+	</footer>
+    
+    <!-- scripts -->
+    <script src="~/js/jquery-3.6.1.min.js"></script>
+	<script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/main.js"></script>
+	<script src="~/owlcarousel/owl.carousel.min.js"></script>
+	<script src="~/js/sweetalert.min.js"></script>
+	<script src="~/js/jquery.browser.min.js"></script>
+	<script src="~/js/jquery.maskedinput-1.3.min.js"></script>
+
+	<script type="text/javascript">
+		//header JS
+		$('#tick2').html($('#tick').html());
+
+		var temp = 0, intervalId = 0, direction = 'right';
+
+		function initializeTicker() {
+			$('#tick li').each(function () {
+				var offset = $(this).offset();
+				var offsetLeft = offset.left;
+				$(this).css({ 'left': temp });
+				temp = $(this).width() + temp;
+			});
+
+			$('#tick').css({ 'width': temp, 'margin-left': '0px' });
+			temp = 0;
+
+			$('#tick2 li').each(function () {
+				var offset = $(this).offset();
+				var offsetLeft = offset.left;
+				$(this).css({ 'left': temp });
+				temp = $(this).width() + temp;
+			});
+
+			$('#tick2').css({ 'width': temp, 'margin-left': temp + 20 });
+		}
+
+		function abc(a, b) {
+			var marginLefta = parseInt($("#" + a).css('margin-left'));
+			var marginLeftb = parseInt($("#" + b).css('margin-left'));
+			var tickerWidth = $("#" + a).width();
+
+			if (direction === 'right') {
+				$("#" + a).css({ 'margin-left': (marginLefta - 1) + 'px' });
+				$("#" + b).css({ 'margin-left': (marginLeftb - 1) + 'px' });
+			} else {
+				$("#" + a).css({ 'margin-left': (marginLefta + 1) + 'px' });
+				$("#" + b).css({ 'margin-left': (marginLeftb + 1) + 'px' });
+			}
+
+			if (direction === 'right' && -marginLefta > tickerWidth) {
+				$("#" + a).css({ 'margin-left': (marginLeftb + tickerWidth + 40) + 'px' });
+			} else if (direction === 'left' && marginLefta > tickerWidth) {
+				$("#" + a).css({ 'margin-left': (marginLeftb - tickerWidth - 40) + 'px' });
+			}
+
+			if (direction === 'right' && -marginLeftb > tickerWidth) {
+				$("#" + b).css({ 'margin-left': (marginLefta + tickerWidth + 40) + 'px' });
+			} else if (direction === 'left' && marginLeftb > tickerWidth) {
+				$("#" + b).css({ 'margin-left': (marginLefta - tickerWidth - 40) + 'px' });
+			}
+		}
+
+		var maxSpeed = 22; // Maximum speed
+		var minSpeed = 2;  // Minimum speed
+		var initialSpeed = 12; // Initial speed
+		var speed = initialSpeed; // Current speed
+
+		function startTicker() {
+			intervalId = window.setInterval(function () {
+				abc('tick', 'tick2');
+			}, speed);
+		}
+
+		function increaseSpeed() {
+			speed = Math.max(minSpeed, speed - 2);
+			updateSpeed();
+		}
+
+		function decreaseSpeed() {
+			speed = Math.min(maxSpeed, speed + 2);
+			updateSpeed();
+		}
+
+		function updateSpeed() {
+			if (intervalId) {
+				pauseTicker();
+				startTicker();
+			}
+		}
+
+		$(document).on("click", "#speedUpBtn", function () {			
+			increaseSpeed();
+		});
+
+		$(document).on("click", "#speedDownBtn", function () {
+			decreaseSpeed();
+		});
+
+		function resetSpeed() {
+			speed = initialSpeed;
+			if (intervalId) {
+				pauseTicker();
+				startTicker();
+			}
+		}
+
+
+		$(document).on("click", "#resetSpeedBtn", function () {
+			resetSpeed();
+		});
+
+		function pauseTicker() {
+			window.clearInterval(intervalId);
+			intervalId = 0;
+		}
+
+		function toggleDirection() {
+			direction = (direction == 'right') ? 'left' : 'right';
+			if (direction == 'right') {
+				$('#toggleDirectionBtn').html('<span class="fa-solid fa-arrow-left"></span>');
+			} else {
+				$('#toggleDirectionBtn').html('<span class="fa-solid fa-arrow-right"></span>');
+			}
+		}
+
+		function toggleTicker() {
+			if (intervalId) {
+				pauseTicker();
+				$('#playPauseBtn').html('<span class="fa-solid fa-play"></span>');
+			} else {
+				startTicker();
+				$('#playPauseBtn').html('<span class="fa-solid fa-pause"></span>');
+			}
+		}
+
+		$(document).on("click", "#playPauseBtn", function () {
+			toggleTicker();
+		});
+		
+		$(document).on("click", "#toggleDirectionBtn", function () {
+			toggleDirection();
+		});
+
+		$('#market_performance__ticker').mouseenter(pauseTicker);
+		$('#market_performance__ticker').mouseleave(function () {
+			if (!intervalId) {
+				startTicker();
+				$('#playPauseBtn').html('<span class="fa-solid fa-pause"></span>');
+			}
+		});
+		
+		function checkWidth() {
+			var windowWidth = $(window).width();
+			var accBtn = $('.acc-btn');
+
+			if (windowWidth < 992) {
+				$('.actbtnmview').html(accBtn);
+			} else {
+				$('.actbtnwrap').html(accBtn);
+			}
+		}
+
+		$(document).ready(function () {
+
+			$.getJSON("/data/ticker.json").done(function (data) {
+				var varHtml = ""; 
+				$.each(data.tickerItems, function (i, d) {
+					varHtml += `
+								<li class="ticker__item" data-ticker="item">
+									<div class="blk">
+										<div class="info ${d.infoClass}">
+											<div><span>${d.symbol}</span> <span>${d.change.price.toFixed(2)}</span></div>
+											<div><span>${d.change.percent.toFixed(2)}</span> <span>${d.change.percent.toFixed(2)}</span></div>
+										</div>
+										<div class="icon ${d.infoClass}"><span class="${d.icon.type == 'solid' ? 'fa-solid' : 'fa-regular'} ${d.icon.name}"></span></div>
+									</div>
+								</li>`;
+				});
+				$("#tick").html(varHtml);
+				$('#tick2').html($('#tick').html());
+				initializeTicker();
+				startTicker();
+			});
+			
+			checkWidth();
+			toggleDropdownToggle();
+
+			$(window).resize(function () {
+				toggleDropdownToggle();
+				checkWidth();
+			});
+
+
+			//datepicker JS
+			$(".DateInput").datepicker(
+				{
+					dateFormat: "dd/mm/yy",
+					showAnim: "scale",
+					changeMonth: true,
+					changeYear: true,
+					yearRange: "1950:2050"
+				});
+				
+			$(document).on("focus", ".check-date", function () {
+				$(this).mask("99/99/9999");
+			});
+
+			$(document).on("click", ".DateInput", function () {
+				$(".ui-datepicker").show();
+			});
+
+			$(document).on("blur", ".ui-datepicker", function () {
+				$(".ui-datepicker").hide();
+			});
+		});
+
+
+		function toggleDropdownToggle() {
+			var windowWidth = $(window).width();
+			var $dropdownToggle = $('.navbar-collapse .navbar-nav .nav-item.dropdown .dropdown-toggle');
+			var $dropdownMenu = $('.navbar-collapse .navbar-nav .nav-item.dropdown .dropdown-menu');
+
+			if (windowWidth < 992) {
+				$dropdownToggle.removeAttr('data-bs-toggle');
+				$dropdownMenu.addClass('show');
+			} else {
+				$dropdownToggle.attr('data-bs-toggle', 'dropdown');
+				$dropdownMenu.removeClass('show');
+			}
+		}
+		
+		//footer JS
+		const date = new Date();
+		let year = date.getFullYear();
+		document.getElementById("copyDate").innerHTML = year;
+
+
+
+
+		//datepicker JS
+		$(document).on("change", ".check-date", function () {
+			var obj = $(this);
+			var isValid = true;
+			var arrDate = obj.val().trim().split("/");
+			if (obj.val().trim() == "") {
+				return false;
+			}
+			var message = "";
+			if (arrDate.length != 3) {
+				message = "Invalid date format.";
+				isValid = false;
+			} else if (isNaN(arrDate[0]) || isNaN(arrDate[1]) || isNaN(arrDate[2])) {
+				message = "Day, month, year must be numeric value.";
+				isValid = false;
+			} else if (arrDate[0].length != 2 || arrDate[1].length != 2 || arrDate[2].length != 4) {
+				message = "Day, month must be 2 digit and year must be 4 digit.";
+				isValid = false;
+			} else if (parseInt(arrDate[0]) > 31 || parseInt(arrDate[0]) < 1) {
+				message = "Day must be between 1 to 31.";
+				isValid = false;
+			} else if (parseInt(arrDate[1]) > 12 || parseInt(arrDate[1]) < 1) {
+				message = "Month must be between 1 to 12.";
+				isValid = false;
+			} else {
+				var dt = new Date(arrDate[2], parseInt(arrDate[1]), 0);
+				var noOfDays = dt.getDate();
+				if (parseInt(arrDate[0]) > noOfDays) {
+					message = "There is maximum " + noOfDays + " days in selected month.";
+					isValid = false;
+				}
+			}
+			if (isValid == false) {
+				swal("Error", "Invalid date. " + message + " Format must be dd/mm/yyyy. (e.g. 01/01/2023)", "error");
+				obj.val("");
+				obj.focus();
+			}
+			return isValid;
+		});
+
+
+	</script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

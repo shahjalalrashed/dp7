@@ -1,0 +1,78 @@
+﻿@{
+	ViewData["Title"] = "Downloads";
+}
+@section styles{
+	<link href="~/css/downloads.css" rel="stylesheet" />
+}
+
+<!-- ----------------------------------------- -->
+<!--                  Downloads                -->
+<!-- ----------------------------------------- -->
+<section class="container ptb60 text-center">
+    <div class="sec-title">
+        <h2>Downloads</h2>
+    </div>
+    <div class="sec-desc pt30">
+		<div class="card brndcard">
+			<div class="card-header">
+				<div class="headingtxt">Downloads</div>
+			</div>
+			<div class="card-body fprevcard">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="downlnkwrap">
+							<a href="/data/test.doc" class="prevlnk">Account Opening Form</a>
+							<a href="https://ospl-totalairbd.com/testdata/test.doc" class="prevlnk">Buy Sale Order Form</a>
+							<a href="https://ospl-totalairbd.com/testdata/ClientLedger171.pdf" class="prevlnk">Fund Withdrawal Application</a>
+							<a href="https://ospl-totalairbd.com/testdata/image2.jpg" class="prevlnk">Client Information Modification Form</a>
+							<a href="https://ospl-totalairbd.com/testdata/testxls.xls" class="prevlnk">Transmission Form</a>
+							<a href="https://ospl-totalairbd.com/testdata/testppt.ppt" class="prevlnk">Demat Form</a>
+							<a href="#" class="prevlnk">Remat Form</a>
+							<a href="#" class="prevlnk">Transfer Form</a>
+							<a href="#" class="prevlnk">Pledge/ Unpledge/ Confiscate Form</a>
+							<a href="#" class="prevlnk">Account Closing Form</a>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="actwrap">
+							<a href="" class="downlnk"><span>Download the preview</span><span class="fa-solid fa-download icn"></span></a>
+						</div>
+						<div id="loadingSpinner" style="display: none;">Loading...</div>
+						<iframe id="fpreview" name="fpreview" frameborder="0" src="" width="100%"></iframe>
+					</div>					
+				</div>
+			</div>
+		</div>
+    </div>	
+</section>
+
+@section scripts{
+    <script type="text/javascript">
+		$(document).on("click", ".downlnkwrap .prevlnk", function (e) {
+			e.preventDefault();
+			var clickedHref = $(this).attr("href");			
+			var iframe = $("#fpreview");
+			var spinner = $("#loadingSpinner");
+			spinner.show();
+			iframe.hide();
+
+			var timestamp = new Date().getTime();
+			var updatedSrc = clickedHref + "?_=" + timestamp;
+
+			$(".actwrap a.downlnk").attr("href", clickedHref);
+			var fileExtension = clickedHref.split('.').pop().toLowerCase();
+
+			if (fileExtension === 'jpg' || fileExtension === 'jpeg' || fileExtension === 'png' || fileExtension === 'gif') {
+				iframe.attr("src", updatedSrc);
+			} else {
+				iframe.attr("src", "https://docs.google.com/gview?url=" + updatedSrc + "&embedded=true");
+			}
+
+			iframe[0].onload = function () {
+				spinner.hide();
+				iframe.show();
+			};
+
+		});
+    </script>
+ }

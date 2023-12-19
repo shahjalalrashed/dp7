@@ -1,0 +1,81 @@
+﻿@{
+	ViewData["Title"] = "Service Details";
+}
+@section styles{
+	<link href="~/css/servicedetails.css" rel="stylesheet" />
+}
+
+<!-- ----------------------------------------- -->
+<!--              Service Details              -->
+<!-- ----------------------------------------- -->
+<section class="container ptb60">
+	@* <div class="row">
+		<div class="col-lg-6">
+			<div class="serproimgwrap">
+				<img class="img-fluid" src="~/images/servicepromotion/dpservice.jpg" alt="" />
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="sec-title">
+				<h2><img class="serviceimg" src="~/images/services/dp-service.png" alt=""> DP SERVICE</h2>
+			</div>
+			<ul class="servlst">
+				<li>BO account opening and maintenance</li>
+				<li>Dematerialization of securities</li>
+				<li>Re-materialization of securities</li>
+				<li>Change of Ownership</li>
+				<li>Pledging and Unpledging services</li>
+				<li>Transfer of securities</li>
+			</ul>
+		</div>
+	</div> *@
+    <div class="row" id="serviceDetailsContainer">        
+	</div>
+</section>
+
+@section scripts{
+    <script type="text/javascript">
+
+        let serviceDetails;
+
+        $.getJSON("/data/serviceDetails.json").done(function (data) {
+            serviceDetails = data;
+            renderServiceDetails();
+        }).fail(function (jqxhr, textStatus, error) {
+            var err = textStatus + ", " + error;
+            console.error("Error loading JSON: " + err);
+        });
+
+        function renderServiceDetails() {
+            const serviceId = getQueryParam('id');
+
+            if (serviceId && serviceDetails[serviceId]) {
+                const serviceHtml = `
+                                    <div class="col-lg-6">
+                                        <div class="serproimgwrap">
+                                            <img class="img-fluid" src="${serviceDetails[serviceId].image}" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="sec-title">
+                                            <h2><img class="serviceimg" src="${serviceDetails[serviceId].nameImage}" alt=""> ${serviceDetails[serviceId].name}</h2>
+                                        </div>
+                                        <ul class="servlst">
+                                            ${serviceDetails[serviceId].list.map(item => `<li>${item}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                    `;
+
+                $('#serviceDetailsContainer').html(serviceHtml);
+            } else {
+                $('#serviceDetailsContainer').html('<p>Service not found</p>');
+            }
+        }
+
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+    </script>
+ }

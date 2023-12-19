@@ -1,0 +1,148 @@
+﻿@{
+	ViewData["Title"] = "Corporate Profile";
+}
+@section styles{
+	<link href="~/css/corporateprofile.css" rel="stylesheet" />
+}
+
+<!-- ----------------------------------------- -->
+<!--             Corporate Profile             -->
+<!-- ----------------------------------------- -->
+<section class="container ptb60 text-center">
+    <div class="sec-title">
+		<h2>CORPORATE PROFILE</h2>
+    </div>
+    <div class="sec-desc pt30">
+		<div class="card brndcard">
+			<div class="card-header">
+				<div class="headingtxt">ABOUT dp7 SECURITIES LTD.</div>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="aboutclstwrap">
+							<ul class="abcomlst" id="abcomplst">
+								@* <li>Baraka Securities Limited was incorporated in Bangladesh on March 11, 2021 as a Private Limited Company having its registered office at 6/A/1, Segunbagicha, Dhaka-1000.</li>
+								<li>The Company applied to the Dhaka Stock Exchange Limited for obtaining a new Trading Right Entitlement Certificate (TREC) on March 28, 2021. Accordingly, the Dhaka Stock Exchange Limited provided its approval to the Company on May 30, 2021 vide their letter no. DSE/COM/TAD/LTR /Approval_New TREC/2021/1010-3259 and subsequently issued TREC to Baraka Securities Limited on September 1, 2021 which was formally handed over to the Company on September 4, 2021.s</li>
+								<li>Trading Right Entitlement Certificate Number of the Company is Registration/DSE/TREC # 274/2021/301</li> *@
+							</ul>
+						</div>
+						<div class="seprator"></div>
+						<div class="miviwrap">
+							<div class="about-title">
+								<span class="fa-solid fa-eye icn"></span>Vision
+							</div>
+							@* <p id="vision">To become a brokerage company of first choice.</p> *@
+							<p id="vision"></p>
+						</div>
+						<div class="seprator"></div>
+						<div class="miviwrap">
+							<div class="about-title">
+								<span class="fa-solid fa-bullseye icn"></span>Mission
+							</div>
+							@* <p id="mission">To maximize wealth of client as well as create values for the overall capital market by providing the best investment solutions and client services.</p> *@
+							<p id="mission"></p>
+						</div>
+						<div class="seprator"></div>
+						<div class="miviwrap">
+							<div class="about-title">
+								<span class="fa-regular fa-circle-dot icn"></span>CORE VALUES
+							</div>
+							<ul class="abcomlst" id="comcoreval">
+								@* <li>Complied Organization</li>
+								<li>Customer service is our first preferences</li>
+								<li>We emphasize on professional ethics</li>
+								<li>Quality is our motto</li>
+								<li>We believe in healthy corporate culture</li>
+								<li>We foster participative management</li> *@
+							</ul>
+						</div>
+						<div class="seprator"></div>
+						<div class="miviwrap">
+							<div class="about-title">
+								<span class="fa-solid fa-gear icn"></span>SERVICES OFFERED
+							</div>
+							<ul class="abcomlst" id="compservices">
+								@* <li>Online BO Account Opening</li>
+								<li>Full DP Services</li>
+								<li>IPO Application</li>
+								<li>SMS & Email Services</li>
+								<li>Online Client Portal for 24 hours data access</li> *@
+							</ul>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+    </div>
+	<div class="sec-desc pt30">
+		<div class="cominfocard">
+			<div class="row" id="cominfocard">
+				@* <div class="col-lg-6">
+					<div class="comothersinfo">
+						<div class="comothersinfotitle">REGISTRATION NO. & DATE</div>
+						<div class="comothersinfodes">C-169708/2021 dated March 11, 2021</div>
+					</div>
+				</div> *@				
+			</div>
+		</div>
+	</div>
+	<div id="loadingSpinner" style="display: none;">Loading...</div>
+</section>
+
+@section scripts{
+    <script type="text/javascript">
+		$(document).ready(function () {
+			$("#loadingSpinner").show();
+			$.getJSON("/data/aboutcompinfo.json").done(function (data) {
+				var compinfoHtml = "";
+				$.each(data.comothersinfo, function (i, d) {
+					compinfoHtml += `
+									<div class="col-lg-6">
+										<div class="comothersinfo">
+											<div class="comothersinfotitle">${d.comothersinfotitle}</div>
+											<div class="comothersinfodes">${d.comothersinfodes}</div>
+										</div>
+									</div>
+									`;
+				});
+				$("#cominfocard").append(compinfoHtml);
+			}).fail(function (jqxhr, textStatus, error) {
+				var err = textStatus + ", " + error;
+				console.error("Request Failed: " + err);
+			}).always(function () {
+				$("#loadingSpinner").hide();
+			});
+						
+			$.getJSON("/data/cominfoservices.json").done(function (data) {
+				var servicesHtml = "";
+				var comcorevalHTML = "";
+				var abcomplstHTML = "";
+				var vision = data.vision;
+				var mission = data.mission;
+
+				$("#vision").text(vision);
+				$("#mission").text(mission);
+
+				$.each(data.services, function (i, d) {
+					servicesHtml += `<li>${d}</li>`;
+				});
+				$.each(data.comcoreval, function (i, d) {
+					comcorevalHTML += `<li>${d}</li>`;
+				});
+				$.each(data.abcomlst, function (i, d) {
+					abcomplstHTML += `<li>${d}</li>`;
+				});
+
+				$("#compservices").append(servicesHtml);
+				$("#comcoreval").append(comcorevalHTML);
+				$("#abcomplst").append(abcomplstHTML);
+			}).fail(function (jqxhr, textStatus, error) {
+				var err = textStatus + ", " + error;
+			}).always(function () {
+				$("#loadingSpinner").hide();
+			});
+				
+		});
+    </script>
+ }

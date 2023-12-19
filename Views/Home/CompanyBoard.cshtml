@@ -1,0 +1,115 @@
+﻿@{
+	ViewData["Title"] = "BOARD OF DIRECTORS";
+}
+@section styles{
+	<link href="~/css/companyboard.css" rel="stylesheet" />
+
+	<style type="text/css">
+	</style>
+}
+
+<!-- ----------------------------------------- -->
+<!--           Board Of Directors              -->
+<!-- ----------------------------------------- -->
+<section class="container ptb60 text-center">
+    <div class="sec-title">
+		<h2>BOARD OF DIRECTORS</h2>
+    </div>
+    <div class="sec-desc pt30">
+		<div class="card brndcard">
+			<div class="card-header">
+				<div class="headingtxt">BOARD OF DIRECTORS</div>
+			</div>
+			<div class="card-body">
+                <div class="row g-3 companyboard">
+                    @* <div class="col-lg-4">
+                        <div class="teamcard bodcard">
+                            <div class="teamcard_inner">
+                                <div class="teamcard_bubble">
+                                    <a class="teamcardlnk" href="@Url.Action("CompanyBoardProfile", "Home")?id=1">
+                                        <h2 class="teamcard_name">Mr. Monzur Kadir Shafi</h2>
+                                        <div class="teamcard_jobTitle">Chairman</div>
+                                        <div class="teamcard_jobTitle">(Representing Baraka Patenga Power Limited)</div>
+                                    </a>
+                                    <div class="teamcard_bubbleFooter">
+                                        <svg class="teamcard_bubbleTip" width="72" height="32">
+                                            <polygon points="24,0 48,0 36,32" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img class="teamcard_image" src="~/images/BOD/GetImage.png" alt="">
+                            </div>
+                        </div>                        
+                    </div> *@
+                </div>
+			</div>
+		</div>
+    </div>	
+</section>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            function teamcardEListener() {
+                const teamCard = document.getElementsByClassName('teamcard');
+
+                for (var i = 0; i < teamCard.length; i++) {
+                    let svg = teamCard[i].getElementsByClassName('teamcard_bubbleTip')[0];
+                    let tip = svg.children[0];
+
+                    bubbleTipPosition(svg, tip);
+
+                    teamCard[i].onmousemove = function (e) {
+                        let bounding = this.getBoundingClientRect();
+                        let x = (e.pageX - bounding['left']) / this.offsetWidth * 100;
+                        bubbleTipPosition(svg, tip, x);
+                    }
+                }
+            }
+
+            function bubbleTipPosition(svg, tip, offsetX) {
+                if (offsetX == undefined) {
+                    offsetX = Math.floor(Math.random() * 100);
+                }
+
+                let posX = offsetX;
+                let bubbleTip = (72 / 100) * (100 - posX);
+
+                svg.setAttribute('style', 'left: ' + posX + '%');
+                tip.setAttribute('points', '24,0 48,0 ' + bubbleTip + ',32');
+            }
+
+            $.getJSON("/data/boardofdirector.json").done(function (data) {
+                var cardHtml = "";                
+                $.each(data.boardOfDirectors, function (i, d) {
+                    var companyBoardProfileUrl = '@Url.Action("CompanyBoardProfile", "Home")';
+                    cardHtml += `
+                                <div class="col-lg-4">
+                                    <div class="teamcard bodcard">
+                                        <div class="teamcard_inner">
+                                            <div class="teamcard_bubble">
+                                                <a class="teamcardlnk" href="${companyBoardProfileUrl}?id=${d.id}">
+                                                    <h2 class="teamcard_name">${d.name}</h2>
+                                                    <div class="teamcard_jobTitle">${d.jobTitle}</div>
+                                                    ${d.representingCompany ? `<div class="teamcard_jobTitle">(Representing ${d.representingCompany})</div>` : ""}
+                                                </a>
+                                                <div class="teamcard_bubbleFooter">
+                                                    <svg class="teamcard_bubbleTip" width="72" height="32">
+                                                        <polygon points="24,0 48,0 36,32" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <img class="teamcard_image" src="${d.imageSrc}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                `;
+                });
+
+                $(".companyboard").html(cardHtml);
+                teamcardEListener();
+            });            
+        });
+
+    </script>
+ }

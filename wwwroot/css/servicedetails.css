@@ -1,0 +1,40 @@
+/*================================
+=         Service Details        =
+================================*/
+.serproimgwrap {
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    overflow: hidden;
+    filter: drop-shadow(-2px 4px 5px rgba(20, 118, 163, 0.233));
+}
+.serviceimg {
+    max-height: 30px;
+    margin-right: 10px;
+}
+.servlst{
+    list-style: none;
+}
+.servlst li {
+    margin: 15px 0;
+    display: flex;
+}
+.servlst li:before {
+    content: '\f058';
+    font-family: 'Font Awesome 6 Free';
+    margin-right: 10px;
+    color: var(--brandcolor);
+}
+
+@media (max-width: 991px) {
+    .serproimgwrap {
+       margin-bottom: 20px;
+    }
+    .sec-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+}
+/*===== End of Service Details ======*/
+
