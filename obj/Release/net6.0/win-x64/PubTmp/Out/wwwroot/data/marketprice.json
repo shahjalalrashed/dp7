@@ -1,0 +1,180 @@
+{
+  "mpcont": [
+    {
+      "mpcontcard": {
+        "serial": "1",
+        "company": "1JANATAMF",
+        "value1": 6.10,
+        "value2": 0.00,
+        "value3": 0.00,
+        "value4": 0.00,
+        "value5": -100.00
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "2",
+        "company": "1STPRIMFMF",
+        "value1": 16.20,
+        "value2": 17.80,
+        "value3": 0.00,
+        "value4": 1.60,
+        "value5": 9.88
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "3",
+        "company": "AAMRANET",
+        "value1": 53.70,
+        "value2": 53.50,
+        "value3": 0.00,
+        "value4": -0.10,
+        "value5": -0.32
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "4",
+        "company": "AAMRATECH",
+        "value1": 30.90,
+        "value2": 30.80,
+        "value3": 0.00,
+        "value4": 0.00,
+        "value5": -100.00
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "5",
+        "company": "1JANATAMF",
+        "value1": 6.10,
+        "value2": 0.00,
+        "value3": 0.00,
+        "value4": 0.00,
+        "value5": -100.00
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "6",
+        "company": "1STPRIMFMF",
+        "value1": 16.20,
+        "value2": 17.80,
+        "value3": 0.00,
+        "value4": 1.60,
+        "value5": 9.88
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "7",
+        "company": "AAMRANET",
+        "value1": 53.70,
+        "value2": 53.50,
+        "value3": 0.00,
+        "value4": -0.10,
+        "value5": -0.32
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "8",
+        "company": "AAMRATECH",
+        "value1": 30.90,
+        "value2": 30.80,
+        "value3": 0.00,
+        "value4": 0.00,
+        "value5": -100.00
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "9",
+        "company": "1JANATAMF",
+        "value1": 6.10,
+        "value2": 0.00,
+        "value3": 0.00,
+        "value4": 0.00,
+        "value5": -100.00
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "10",
+        "company": "1STPRIMFMF",
+        "value1": 16.20,
+        "value2": 17.80,
+        "value3": 0.00,
+        "value4": 1.60,
+        "value5": 9.88
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "11",
+        "company": "AAMRANET",
+        "value1": 53.70,
+        "value2": 53.50,
+        "value3": 0.00,
+        "value4": -0.10,
+        "value5": -0.32
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "12",
+        "company": "AAMRATECH",
+        "value1": 30.90,
+        "value2": 30.80,
+        "value3": 0.00,
+        "value4": 0.00,
+        "value5": -100.00
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "13",
+        "company": "1JANATAMF",
+        "value1": 6.10,
+        "value2": 0.00,
+        "value3": 0.00,
+        "value4": 0.00,
+        "value5": -100.00
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "14",
+        "company": "1STPRIMFMF",
+        "value1": 16.20,
+        "value2": 17.80,
+        "value3": 0.00,
+        "value4": 1.60,
+        "value5": 9.88
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "100",
+        "company": "AAMRANET",
+        "value1": 53.70,
+        "value2": 53.50,
+        "value3": 0.00,
+        "value4": -0.10,
+        "value5": -0.32
+      }
+    },
+    {
+      "mpcontcard": {
+        "serial": "1000",
+        "company": "AAMRATECH",
+        "value1": 30.90,
+        "value2": 30.80,
+        "value3": 0.00,
+        "value4": 0.00,
+        "value5": -100.00
+      }
+    }
+  ]
+}

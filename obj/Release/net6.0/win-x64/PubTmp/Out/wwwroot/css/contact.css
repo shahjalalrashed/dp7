@@ -1,0 +1,64 @@
+/*================================
+=             Contact            =
+================================*/
+.headingtxt {
+    font-weight: 700;
+}
+.contactContentWrap {
+    text-align: left;
+    text-align-last: left;
+}
+.posrel {
+    position: relative;
+}
+.contactContentWrap:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-right: 1px solid var(--liashcolor);
+}
+.contactContentWrap .titletxt {
+    font-weight: 600;
+    color: var(--darkbrandcolor);
+}
+.contactContentWrap .cperinfo {
+    margin-top: 10px;
+}
+.contactContentWrap .titletxt .icn {
+    margin-right: 5px;
+}
+.contactContentWrap .descriptxt {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.contactContentWrap .descriptxt .txtred {
+    color: var(--brandcolor);
+}
+.contactContentWrap .cperinfo {
+    font-size: 14px;
+}
+.contactContentWrap .cperinfo .contactnmetxt {
+    font-weight: 600;
+}
+
+@media (max-width: 991px) {
+    .contactContentWrap {
+        margin-bottom: 15px;
+        padding-top: 15px;
+    }
+    .contactContentWrap:after {
+        content: "";
+        position: absolute;
+        left: 13%;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 74%;
+        border-right: none;
+        border-bottom: 1px solid var(--liashcolor);
+    }
+}
+/*===== End of Contact ======*/
+

@@ -1,0 +1,44 @@
+{
+  "boardOfDirectors": [
+    {
+      "id" : 1,
+      "name": "Mr. Monzur Kadir Shafi",
+      "jobTitle": "Chairman",
+      "representingCompany": "Baraka Patenga Power Limited",
+      "imageSrc": "/images/BOD/GetImage.png"
+    },
+    {
+      "id": 2,
+      "name": "Mr. Gulam Rabbani Chowdhury",
+      "jobTitle": "Director & Managing Director",
+      "representingCompany": "Baraka Patenga Power Limited",
+      "imageSrc": "/images/BOD/GetImage2.png"
+    },
+    {
+      "id": 3,
+      "name": "Mr. Fahim Ahmed Chowdhury",
+      "jobTitle": "Director",
+      "representingCompany": "Baraka Patenga Power Limited",
+      "imageSrc": "/images/BOD/GetImage3.png"
+    },
+    {
+      "id": 4,
+      "name": "Mr. Zahrul Syed Bakht",
+      "jobTitle": "Director",
+      "representingCompany": "Baraka Patenga Power Limited",
+      "imageSrc": "/images/BOD/GetImage4.png"
+    },
+    {
+      "id": 5,
+      "name": "Mr. Nanu Kazi Mohammed Miah",
+      "jobTitle": "Director",
+      "imageSrc": "/images/BOD/GetImage5.png"
+    },
+    {
+      "id": 6,
+      "name": "Ms. Rushina Ahmed Chowdhury",
+      "jobTitle": "Director",
+      "imageSrc": "/images/BOD/GetImage6.png"
+    }
+  ]
+}

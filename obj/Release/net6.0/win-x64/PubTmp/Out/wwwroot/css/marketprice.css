@@ -1,0 +1,76 @@
+/*================================
+=         market price           =
+================================*/
+.mpcontwrap .mpheading {
+    padding: 10px 5px;
+    color: var(--bs-white);
+    background-color: var(--brandcolor);
+    border-top-left-radius: 35px;
+    filter: drop-shadow(-2px 4px 5px rgba(20, 118, 163, 0.233));
+    font-size: 14px;
+    font-weight: 700;
+}
+.mpcontwrap .mpcont .mpcontcard {
+    margin-top: 10px;
+    padding: 10px 5px;
+    background-color: var(--bs-white);
+    filter: drop-shadow(-2px 4px 5px rgba(20, 118, 163, 0.233));
+    font-size: 14px;
+}
+.mpcontwrap .mpcont .mpcontcard:last-child {
+    border-bottom-right-radius: 35px;
+}
+.mpcontwrap .mpcont .mpcontcard .serial {
+    color: var(--brandcolor);
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+}
+.mpcontwrap .mpcont .mpcontcard .txtred {
+    color: var(--brandcolor);
+}
+.mpcontwrap .mpcont .mpcontcard .txtgreen {
+    color: var(--dgreencolor);
+}
+.mpcontwrap .mpcont .mpcontcard .icn {
+    margin-right: 5px;
+    color: var(--dgreencolor);
+    font-size: 12px;
+}
+
+@media (max-width: 991px) {
+    .mpcontwrap .mpheading {
+        display: none;
+    }
+    .mpcontwrap .mpcont .mpcontcard {
+        padding: 0px 0px;
+        border-top-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        overflow: hidden;
+    }
+    .mpcontcard .serial {
+        display: flex;
+        padding: 5px 0px;
+        justify-content: center;
+        color: var(--bs-white) !important;
+        background-color: var(--brandcolor);
+    }
+    .mpcontwrap .mpcont .mpcontcard .contbottom {
+        padding: 15px 25px 20px 20px;
+        text-align: right;
+    }
+    .mpcontwrap .mpcont .mpcontcard .contbottom .cbItem {
+        text-align-last: right;
+    }
+    .mpcontwrap .mpcont .mpcontcard .contbottom .cbItem:before {
+        content: attr(data-label);
+        float: left;
+        margin-right: 10px;
+        font-weight: bold;
+        color: var(--bs-body-color);
+    }
+}
+
+/*===== End of market price ======*/
+
+

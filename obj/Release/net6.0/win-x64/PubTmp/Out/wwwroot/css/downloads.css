@@ -1,0 +1,65 @@
+/*================================
+=            Downloads           =
+================================*/
+.headingtxt {
+    font-weight: 700;
+}
+.fprevcard {
+    text-align-last: left;
+}
+.fprevcard #fpreview {
+    width: 100%;
+    height: 100vh;
+}
+.fprevcard .downlnkwrap .prevlnk {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background: var(--bs-white);
+    color: var(--brandcolor);
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: left;
+    border: 1px solid var(--brandcolor);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.fprevcard .downlnkwrap .prevlnk:hover,
+.fprevcard .downlnkwrap .prevlnk:active,
+.fprevcard .downlnkwrap .prevlnk:focus {
+    background: var(--brandcolor);
+    color: var(--bs-white);
+}
+.fprevcard .actwrap {
+    min-height: 40px;
+}
+.fprevcard .actwrap .downlnk {
+    background: var(--bs-white);
+    color: var(--brandcolor);
+    border: 1px solid var(--brandcolor);
+    font-size: 14px;
+    line-height: 1;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+.fprevcard .actwrap .downlnk:hover,
+.fprevcard .actwrap .downlnk:active,
+.fprevcard .actwrap .downlnk:focus {
+    background: var(--brandcolor);
+    color: var(--bs-white);
+}
+.fprevcard .actwrap .downlnk .icn{
+    margin-left: 5px;
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 575px) {
+}
+/*===== End of Downloads ======*/
+

@@ -1,0 +1,116 @@
+{
+  "serviceitems": [
+    {
+      "moderncard": {
+        "moderncard_content": {
+          "moderncard_icon": {
+            "foot-logo": "/images/services/dp-service.png"
+          },
+          "moderncard_body": {
+            "service-title": "DP SERVICE",
+            "service-link": ""
+          }
+        },
+        "moderncard_layout": {}
+      }
+    },
+    {
+      "moderncard": {
+        "moderncard_content": {
+          "moderncard_icon": {
+            "foot-logo": "/images/services/broker-service.png"
+          },
+          "moderncard_body": {
+            "service-title": "BROKERAGE SERVICE",
+            "service-link": ""
+          }
+        },
+        "moderncard_layout": {}
+      }
+    },
+    {
+      "moderncard": {
+        "moderncard_content": {
+          "moderncard_icon": {
+            "foot-logo": "/images/services/ipo-app.png"
+          },
+          "moderncard_body": {
+            "service-title": "IPO APPLICATION",
+            "service-link": ""
+          }
+        },
+        "moderncard_layout": {}
+      }
+    },
+    {
+      "moderncard": {
+        "moderncard_content": {
+          "moderncard_icon": {
+            "foot-logo": "/images/services/research-icon.png"
+          },
+          "moderncard_body": {
+            "service-title": "BSL RESEARCH",
+            "service-link": ""
+          }
+        },
+        "moderncard_layout": {}
+      }
+    },
+    {
+      "moderncard": {
+        "moderncard_content": {
+          "moderncard_icon": {
+            "foot-logo": "/images/services/custodial-service.png"
+          },
+          "moderncard_body": {
+            "service-title": "CUSTODIAL SERVICE",
+            "service-link": ""
+          }
+        },
+        "moderncard_layout": {}
+      }
+    },
+    {
+      "moderncard": {
+        "moderncard_content": {
+          "moderncard_icon": {
+            "foot-logo": "/images/services/sme.png"
+          },
+          "moderncard_body": {
+            "service-title": "SME PLATFORM ACCESS",
+            "service-link": ""
+          }
+        },
+        "moderncard_layout": {}
+      }
+    },
+    {
+      "moderncard": {
+        "moderncard_content": {
+          "moderncard_icon": {
+            "foot-logo": "/images/services/online-service.png"
+          },
+          "moderncard_body": {
+            "service-title": "ONLINE SERVICES",
+            "service-link": ""
+          }
+        },
+        "moderncard_layout": {}
+      }
+    },
+    {
+      "moderncard": {
+        "moderncard_content": {
+          "moderncard_icon": {
+            "foot-logo": "/images/services/custodial-service_1.png"
+          },
+          "moderncard_body": {
+            "service-title": "BONDS DEALING",
+            "service-link": ""
+          }
+        },
+        "moderncard_layout": {}
+      }
+    }
+  ]
+}

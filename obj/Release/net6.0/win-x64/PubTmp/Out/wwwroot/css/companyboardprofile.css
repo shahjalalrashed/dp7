@@ -1,0 +1,63 @@
+/*================================
+=   Board Of Directors Profile   =
+================================*/
+.dprofile .cp-name {
+    color: var(--brandcolor);
+}
+.dprofile .cp-des {
+    color: var(--darkbrandcolor);
+}
+.dprofile .cp-card {
+    padding: 20px;
+    background-color: var(--bs-white);
+    filter: drop-shadow(-2px 4px 5px rgba(20, 118, 163, 0.233));
+    font-size: 14px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    position: relative;
+    text-align: justify;
+}
+.dprofile .cp-card:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    left: 5%;
+    border: 20px solid transparent;
+    border-top: none;
+    border-bottom-color: var(--bs-white);
+    filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(20, 118, 163, 0.133));
+}
+.dprofile .cp-card .contwsep {
+    position: relative;
+    padding: 15px 0px;
+}
+.dprofile .cp-card .contwsep:before {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    height: 2px;
+    background: radial-gradient(at center center, rgba(20, 118, 163, 0.2) 0px, rgba(20, 118, 163, 0) 75%);
+}
+.dprofile .cp-card .contwsep:after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 0px;
+    height: 2px;
+    background: radial-gradient(at center center, rgba(20, 118, 163, 0.2) 0px, rgba(20, 118, 163, 0) 75%);
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 575px) {
+}
+/*===== End of Board Of Directors Profile ======*/
+

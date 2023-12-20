@@ -1,0 +1,108 @@
+/*================================
+=              News              =
+================================*/
+.lnewssec {
+    width: 100%;
+}
+.lnewssec .titletext {
+    font-weight: 700;
+}
+.lnewssec .titletext {
+    font-weight: 700;
+}
+.lnewssec .lnbottomcont {
+    text-align-last: left;
+}
+.lnewssec .lnbottomcont .form-label {
+    font-weight: 600;
+}
+.anCard {
+    background-color: var(--bs-white);
+    filter: drop-shadow(-2px 4px 5px rgba(20, 118, 163, 0.233));
+    margin-top: 10px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.anCard .serialnumber {
+    background-color: var(--brandcolor);
+    color: var(--bs-white);
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    font-weight: 600;
+}
+.anCard .newscont {
+    flex: 1;
+    padding: 10px 20px;
+    text-align-last: left;
+}
+.anCard .newscont .dntcodewrap {
+    display: flex;
+    justify-content: space-between;
+}
+.anCard .newscont .dntcodewrap .dtewrap,
+.anCard .newscont .dntcodewrap .tradingcode {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--darkbrandcolor)
+}
+.anCard .newscont .dntcodewrap .dtewrap .icn,
+.anCard .newscont .dntcodewrap .tradingcode .icn {
+    margin-right: 5px;
+    font-size: 12px;
+}
+.anCard .newscont .newstxt {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.nonewserrmessage {
+    background-color: var(--bs-white);
+    filter: drop-shadow(-2px 4px 5px rgba(20, 118, 163, 0.233));
+    margin-top: 10px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.nonewserrmessage .icn {
+    margin-bottom: 15px;
+    font-size: 38px;
+    color: var(--brandcolor);
+}
+
+@media (max-width: 991px) {
+    .lnsecnav .navbar-toggler{
+        color: var(--brandcolor);
+        background-color: var(--bs-white);
+        border-color: var(--brandcolor);
+    }
+    .lnsecnav .navbar-toggler:focus {
+        color: var(--bs-white);
+        background-color: var(--brandcolor);
+    }
+}
+
+@media (max-width: 575px) {
+    .anCard .serialnumber {
+        width: 100%
+    }
+    .anCard .newscont .dntcodewrap {
+        display: block;
+    }
+}
+
+/*===== End of news ======*/
+

@@ -1,0 +1,119 @@
+/*================================
+=          New Bo Account        =
+================================*/
+.bs-wizard {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 0 15px 0;
+}
+.bs-wizard > .bs-wizard-step {
+    padding: 0;
+    position: relative;
+    flex: 1;
+}
+.bs-wizard > .bs-wizard-step .bs-wizard-info {
+    color: var(--bs-light-text-emphasis);
+    font-size: 14px;
+}
+.bs-wizard > .bs-wizard-step .bs-wizard-info .icn {
+    margin-right: 5px;
+}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: var(--brandcolor);
+    top: 45px;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    border-radius: 50%;
+}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: var(--darkbrandcolor);
+    border-radius: 50px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+.bs-wizard > .bs-wizard-step > .progress {
+    position: relative;
+    border-radius: 0px;
+    height: 8px;
+    box-shadow: none;
+    margin: 40px 0px 20px 0px;
+}
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+    width: 0px;
+    box-shadow: none;
+    background: var(--brandcolor);
+}
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+    width: 100%;
+}
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
+    width: 50%;
+}
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+    width: 0%;
+}
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+    width: 100%;
+}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+    background-color: var(--lighashcolor);
+}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
+    opacity: 0.2;
+}
+.bs-wizard > .bs-wizard-step:first-child > .progress {
+    left: 50%;
+    width: 50%;
+}
+.bs-wizard > .bs-wizard-step:last-child > .progress {
+    width: 50%;
+}
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
+    pointer-events: none;
+}
+.wizardstepwrap .tab-content {
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    filter: drop-shadow(-2px 4px 5px rgba(20, 118, 163, 0.233));
+    background-color: var(--bs-white);
+    padding: 20px;
+    text-align: left;
+    text-align-last: left;
+}
+.wizardstepwrap .form-label {
+    font-weight: 600;
+    font-size: 15px;
+}
+.wizardstepwrap .form-label.required:after {
+    content: "*";
+    color: var(--brandcolor);
+}
+
+@media (max-width: 991px) {
+    .blanklbl {
+        display: none;
+    }
+}
+
+@media (max-width: 460px) {
+    .bs-wizard {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: initial;
+    }
+    .bs-wizard > .bs-wizard-step .bs-wizard-info {
+        padding: 0px 10px;
+    }
+}
+/*===== End of New Bo Account ======*/
+

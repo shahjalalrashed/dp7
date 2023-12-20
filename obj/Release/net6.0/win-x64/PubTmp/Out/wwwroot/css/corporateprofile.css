@@ -1,0 +1,85 @@
+/*================================
+=        Corporate Profile       =
+================================*/
+.headingtxt {
+    font-weight: 700;
+}
+.aboutclstwrap {
+    text-align-last: left;
+    font-size: 14px;
+}
+.abcomlst {
+    list-style: none;
+    padding-left: 0px;
+    font-size: 14px;
+}
+.abcomlst li {
+    margin: 5px 0;
+    display: flex;
+}
+.abcomlst li:before {
+    content: '\f058';
+    font-family: 'Font Awesome 6 Free';
+    margin-right: 10px;
+    color: var(--brandcolor);
+}
+.miviwrap {
+    text-align-last: left;
+    text-align: left;
+}
+.about-title {
+    display: flex;
+    align-items: center;
+    color: var(--brandcolor);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.about-title .icn {
+    margin-right: 5px;
+}
+.seprator {
+    position: relative;
+    padding: 0px 0px 10px 0px;
+}
+.seprator:before {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    height: 2px;
+    background: radial-gradient(at center center, rgba(20, 118, 163, 0.2) 0px, rgba(20, 118, 163, 0) 75%);
+}
+.cominfocard {
+    background-color: var(--bs-white);
+    padding: 5px 20px 20px 20px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    overflow: hidden;
+    filter: drop-shadow(-2px 4px 5px rgba(20, 118, 163, 0.233));
+}
+.cominfocard .comothersinfo {
+    margin-top: 15px;
+}
+.cominfocard .comothersinfo .comothersinfotitle {
+    font-weight: 600;
+    padding: 3px 20px;
+    text-transform: uppercase;
+}
+.cominfocard .comothersinfo .comothersinfodes {
+    border-radius: 0px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: var(--liblucolor);
+    font-size: 14px;
+    padding: 5px 20px;
+    text-align: center;
+}
+@media (max-width: 991px) {
+}
+
+@media (max-width: 575px) {
+}
+/*===== End of Corporate Profile ======*/
+

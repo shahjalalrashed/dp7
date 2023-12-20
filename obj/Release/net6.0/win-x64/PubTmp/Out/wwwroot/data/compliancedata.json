@@ -1,0 +1,60 @@
+{
+  "complianceCertificates": [
+    {
+      "type": "INCORPORATION CERTIFICATE",
+      "imageSrc": "/images/ComplianceStatus/rjsc.jpg",
+      "certificateNumber": "C-169708/2021",
+      "issueDate": "11 Mar 2021",
+      "authority": "Registrar of Joint Stock Companies & Firms (RJSC)"
+    },
+    {
+      "type": "E-TIN",
+      "imageSrc": "/images/ComplianceStatus/nbr.png",
+      "certificateNumber": "764500971377",
+      "issueDate": "11 Mar 2021",
+      "authority": "National Board of Revenue (NBR)"
+    },
+    {
+      "type": "TRADE LICENSE",
+      "imageSrc": "/images/ComplianceStatus/dscc.png",
+      "certificateNumber": "TRAD/DSCC/055943/2020",
+      "issueDate": "15 Mar 2021",
+      "authority": "Dhaka South City Corporation (DSCC)"
+    },
+    {
+      "type": "BIN",
+      "imageSrc": "/images/ComplianceStatus/nbr.png",
+      "certificateNumber": "003656713-0208",
+      "issueDate": "17 Mar 2021",
+      "authority": "National Board of Revenue (NBR)"
+    },
+    {
+      "type": "TRADING RIGHT ENTITLEMENT CERTIFICATE (TREC)",
+      "imageSrc": "/images/ComplianceStatus/dse.png",
+      "certificateNumber": "274/2021/301",
+      "issueDate": "01 Sep 2021",
+      "authority": "Dhaka Stock Exchange (DSE)"
+    },
+    {
+      "type": "STOCK BROKER LICENSES",
+      "imageSrc": "/images/ComplianceStatus/bsec.jpg",
+      "certificateNumber": "নিবন্ধন-৩.১/ডিএসই-২৭৪/২০২২/৬০১",
+      "issueDate": "02 Mar 2022",
+      "authority": "Bangladesh Securities and Exchange Commission (BSEC)"
+    },
+    {
+      "type": "STOCK DEALER LICENSES",
+      "imageSrc": "/images/ComplianceStatus/bsec.jpg",
+      "certificateNumber": "নিবন্ধন-৩.১/ডিএসই-২৭৪/২০২২/৬০২",
+      "issueDate": "02 Mar 2022",
+      "authority": "Bangladesh Securities and Exchange Commission (BSEC)"
+    },
+    {
+      "type": "FULL SERVICE DEPOSITORY PARTICIPANT (DP) REGISTRATION",
+      "imageSrc": "/images/ComplianceStatus/bsec.jpg",
+      "certificateNumber": "বিএসইসি/নিবন্ধন/সিডিবিএল-৪৭০",
+      "issueDate": "20 Mar 2022",
+      "authority": "Bangladesh Securities and Exchange Commission (BSEC)"
+    }
+  ]
+}
