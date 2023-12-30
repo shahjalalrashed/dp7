@@ -1,0 +1,23 @@
+
+/*================================
+=             Cgllstc            =
+================================*/
+.cglsec .form-label,
+.lssec .form-label,
+.tcsec .form-label {
+    font-weight: 600;
+}
+.cglsec .cglbottomcont,
+.lssec .lsbottomcont,
+.tcsec .tcbottomcont {
+    text-align-last: left;
+}
+/*=====  End of Cgllstc  ======*/
+@media (max-width: 991px) {
+}
+@media (max-width: 575px) {
+    
+}
+
+
+

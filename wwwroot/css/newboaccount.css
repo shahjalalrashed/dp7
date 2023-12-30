@@ -48,6 +48,9 @@
     box-shadow: none;
     margin: 40px 0px 20px 0px;
 }
+.bs-wizard > .bs-wizard-step.completed > .progress {
+    background: var(--brandcolor);
+}
 .bs-wizard > .bs-wizard-step > .progress > .progress-bar {
     width: 0px;
     box-shadow: none;
@@ -68,6 +71,9 @@
 .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
     background-color: var(--lighashcolor);
 }
+.bs-wizard > .bs-wizard-step.disabled.completed > .bs-wizard-dot {
+    background-color: var(--brandcolor);
+}
 .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
     opacity: 0.2;
 }
@@ -80,6 +86,9 @@
 }
 .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
     pointer-events: none;
+}
+.bs-wizard > .bs-wizard-step.disabled.completed a.bs-wizard-dot {
+    pointer-events: auto !important;
 }
 .wizardstepwrap .tab-content {
     border-top-left-radius: 35px;

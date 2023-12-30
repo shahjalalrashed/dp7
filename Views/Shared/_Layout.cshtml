@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@* @{
+	var currentController = ViewContext.RouteData.Values["Controller"].ToString();
+	var currentAction = ViewContext.RouteData.Values["Action"].ToString();
+} *@
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -43,7 +48,7 @@
 	<header class="sticky-top">
 		<div class="hwrap">
 			<div class="logonmenuwrap order-first order-lg-1">
-				<a href="@Url.Action("Index", "Home")"><img class="foot-logo" src="~/images/logo.png" alt=""></a>
+				<a href="@Url.Action("Index", "Home")"><img src="~/images/logo.png" alt=""></a>
 				<div class="actbtnmview"></div>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -75,6 +80,7 @@
 						<ul class="navbar-nav m-auto mb-lg-0">
 							<li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="@Url.Action("Index", "Home")"><span class="fa-solid fa-house icn"></span>Home</a>
+								@* <a class="nav-link active" aria-current="page" href="@Url.Action("Index", "Home")" class="menu index @(currentController == "Home" && currentAction == "Index" ? "active" : "")"><span class="fa-solid fa-house icn"></span>Home</a> *@
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -111,7 +117,7 @@
 						</ul>
 						<div class="actbtnwrap">
 							<div class="acc-btn">
-								<a href="#" class="btn-th me-2"><i class="fa fa-right-to-bracket icn"></i><span class="stxt">Login</span></a>
+								<a href="@Url.Action("Login", "ClientPortal")" class="btn-th me-2"><i class="fa fa-right-to-bracket icn"></i><span class="stxt">Login</span></a>
 								<a href="@Url.Action("NewBoAccount", "Home")" class="btn-th"><i class="fa fa-user-plus icn"></i><span class="stxt">New BO Account</span></a>
 							</div>
 						</div>

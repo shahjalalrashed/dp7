@@ -1,0 +1,74 @@
+
+/*================================
+=             Login              =
+================================*/
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var();
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-direction: column;
+    margin: 20px auto;
+}
+.login-card {
+    background: #ffffff;
+    padding: 20px;
+    position: unset;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    max-width: 410px;
+    width: 100%;
+    display: unset;
+    filter: drop-shadow(-2px 4px 5px rgba(20, 118, 163, 0.233));
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.otp-input .alert {
+    font-size: 14px;
+    border-radius: var(--bs-border-radius) !important;
+}
+.welcome-text {
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.welcome-text .weltxt {
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--bs-light-text-emphasis);
+    margin-bottom: 5px;
+}
+
+.otp-input-section .input-group .btn-brand {
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+}
+.btn-reset-otp {
+    color: var(--brandcolor);
+    background-color: var(--bs-white);
+    border-color: var(--bs-border-color);
+}
+.btn-reset-otp:hover,
+.btn-reset-otp:focus,
+.btn-reset-otp.active {
+    color: var(--bs-white);
+    background-color: var(--brandcolor);
+}
+/*=====  End of Login  ======*/
+@media (max-width: 991px) {
+}
+@media (max-width: 575px) {
+    
+}
+
+
+

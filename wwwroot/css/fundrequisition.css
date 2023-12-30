@@ -1,0 +1,32 @@
+
+/*================================
+=        Fund Requisition        =
+================================*/
+.frsec {
+    text-align-last: left;
+}
+.req-amount {
+    padding: 30px;
+    display: flex;
+    border: 1px solid #eeeeee;
+}
+.table .thead .tr .th, .table .tbody .tr .td {
+    flex-basis: 20%;
+}
+.table > :not(caption) > * > * {
+    padding: 6px 15px;
+}
+@media only screen and (max-width: 991px) {    
+    .table .tbody .tr .td {
+        flex-basis: 100%;
+    }
+    /*.tbody .td:nth-child(n+3) {
+        margin-top: 15px;
+    }*/
+}
+/*=====  End of Fund Requisition  ======*/
+
+
+
+
+

@@ -62,8 +62,8 @@
                         <div class="row g-3 mb-3">
                             <div class="col-lg-6">
                                 <label for="accounttype" class="form-label required">Account Type</label>
-                                <select class="form-select" id="accounttype">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Your Account Type</option>
+                                <select class="form-select" id="accounttype" data-attr="mandatory">
+                                    <option class="first-option" selected="" style="display: none;" value="0">Select Your Account Type</option>
                                     <option value="single">Single</option>
                                     <option value="joint">Joint</option>
                                 </select>
@@ -71,7 +71,7 @@
                             <div class="col-lg-6">
                                 <label for="introducer" class="form-label">Introducer</label>
                                 <select class="form-select" id="introducer">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Introducer</option>
+                                    <option class="first-option" selected="" style="display: none;" value="0">Select Introducer</option>
                                     <option value="1">1 - MOHAMMED ENAMUL KABIR</option>
                                     <option value="10">10 - MOHAMMAD NURUZZAMAN BHUIYAN</option>
                                     <option value="11">11 - MD MONJURUL ALAM CHY</option>
@@ -99,8 +99,8 @@
                         <div class="row g-3 mb-3">
                             <div class="col-lg-2">
                                 <label for="fainame" class="form-label required">Name</label>
-                                <select class="form-select" id="fainame">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Mr./Ms.</option>
+                                <select class="form-select" id="fainame" data-attr="mandatory">
+                                    <option class="first-option" selected="" style="display: none;" value="0">Mr./Ms.</option>
                                     <option value="mr">Mr.</option>
                                     <option value="ms">Ms.</option>
                                 </select>
@@ -117,8 +117,8 @@
                         <div class="row g-3 mb-3">
                             <div class="col-lg-3">
                                 <label for="fohname" class="form-label required">Father's/Husband's Name</label>
-                                <select class="form-select" id="fohname">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Father's/Husband's Name</option>
+                                <select class="form-select" id="fohname" data-attr="mandatory">
+                                    <option class="first-option" selected="" style="display: none;" value="0">Father's/Husband's Name</option>
                                     <option value="mr">Father's Name</option>
                                     <option value="ms">Husband's Name</option>
                                 </select>
@@ -129,18 +129,18 @@
                             </div>
                             <div class="col-lg-4">
                                 <label for="mname" class="form-label required">Mother's Name</label>
-                                <input id="mname" type="text" class="form-control" placeholder="Enter Your Mother's Name">
+                                <input id="mname" type="text" class="form-control" placeholder="Enter Your Mother's Name" data-attr="mandatory">
                             </div>
                         </div>
                         <div class="row g-3 mb-3">
                             <div class="col-lg-3">
                                 <label for="dobirth" class="form-label required">Date of Birth</label>
-                                <input type="text" id="dobirth" class="form-control DateInput check-date" placeholder="Date of Birth">
+                                <input type="text" id="dobirth" class="form-control DateInput check-date" placeholder="Date of Birth" data-attr="mandatory">
                             </div>
                             <div class="col-lg-3">
                                 <label for="ocupation" class="form-label">Occupation</label>
                                 <select id="ocupation" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Your Occupation</option>
+                                    <option class="first-option" selected="" style="display: none;">Select Your Occupation</option>
                                     <option value="1">Service Holder</option>
                                     <option value="2">Programming</option>
                                     <option value="3">Housewife</option>
@@ -156,7 +156,7 @@
                             <div class="col-lg-3">
                                 <label for="gend" class="form-label">Gender</label>
                                 <select id="gend" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Your Gender</option>
+                                    <option class="first-option" selected="" style="display: none;">Select Your Gender</option>
                                     <option value="1">Male</option>
                                     <option value="2">Female</option>
                                 </select>
@@ -164,7 +164,7 @@
                             <div class="col-lg-3">
                                 <label for="marstatus" class="form-label">Martial Status</label>
                                 <select id="marstatus" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Your Martial Status</option>
+                                    <option class="first-option" selected="" style="display: none;">Select Your Martial Status</option>
                                     <option value="1">Single</option>
                                     <option value="2">Married</option>
                                 </select>
@@ -174,7 +174,7 @@
                             <div class="col-lg-6">
                                 <label for="ponid" class="form-label">Passport/NID</label>
                                 <select id="ponid" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Passport/NID</option>
+                                    <option class="first-option" selected="" style="display: none;">Passport/NID</option>
                                     <option value="1">Passport</option>
                                     <option value="2">NID</option>
                                 </select>
@@ -187,30 +187,30 @@
                         <div class="row g-3 mb-3">
                             <div class="col-lg-4">
                                 <label for="sodiv" class="form-label required">State/Division</label>
-                                <select id="sodiv" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Your Division</option>
+                                <select id="sodiv" class="form-select" data-attr="mandatory">
+                                    <option class="first-option" selected="" style="display: none;" value="0">Select Your Division</option>
                                     <option value="1">Dhaka</option>
                                     <option value="2">Barisal</option>
                                 </select>
                             </div>
                             <div class="col-lg-4">
                                 <label for="city" class="form-label required">City</label>
-                                <select id="city" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Your City</option>
+                                <select id="city" class="form-select" data-attr="mandatory">
+                                    <option class="first-option" selected="" style="display: none;" value="0">Select Your City</option>
                                     <option value="1">Dhaka</option>
                                     <option value="2">Barisal</option>
                                 </select>
                             </div>
                             <div class="col-lg-4">
                                 <label for="zopcode" class="form-label required">ZIP/Post Code</label>
-                                <input type="text" id="zopcode" class="form-control" placeholder="Enter the ZIP/Post Code">
+                                <input type="text" id="zopcode" class="form-control" placeholder="Enter the ZIP/Post Code" data-attr="mandatory">
                             </div>
                         </div>
                         <div class="row g-3 mb-3">
                             <div class="col-lg-2">
                                 <label for="caddress" class="form-label">Contact Address</label>
                                 <select id="caddress" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select</option>
+                                    <option class="first-option" selected="" style="display: none;">Select</option>
                                     <option value="1">NID</option>
                                     <option value="2">Passport</option>
                                     <option value="3">Utility</option>
@@ -223,7 +223,7 @@
                             <div class="col-lg-2">
                                 <label for="paddress" class="form-label">Present Address</label>
                                 <select id="paddress" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select</option>
+                                    <option class="first-option" selected="" style="display: none;">Select</option>
                                     <option value="1">NID</option>
                                     <option value="2">Passport</option>
                                     <option value="3">Utility</option>
@@ -236,7 +236,7 @@
                             <div class="col-lg-2">
                                 <label for="peraddress" class="form-label">Permanent Address</label>
                                 <select id="peraddress" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select</option>
+                                    <option class="first-option" selected="" style="display: none;">Select</option>
                                     <option value="1">NID</option>
                                     <option value="2">Passport</option>
                                     <option value="3">Utility</option>
@@ -254,7 +254,7 @@
                         <div class="row g-3 mb-3">
                             <div class="col-lg-6">
                                 <label for="pmnum" class="form-label required">Mobile Number</label>
-                                <input type="text" id="pmnum" class="form-control" placeholder="Primary Mobile Number">
+                                <input type="text" id="pmnum" class="form-control" placeholder="Primary Mobile Number" data-attr="mandatory">
                             </div>
                             <div class="col-lg-6">
                                 <label for="secmnum" class="form-label blank">&nbsp;</label>
@@ -280,23 +280,23 @@
                         <div class="row g-3 mb-3">
                             <div class="col-lg-4">
                                 <label for="bank" class="form-label required">Bank</label>
-                                <select id="bank" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Bank</option>
+                                <select id="bank" class="form-select" data-attr="mandatory">
+                                    <option class="first-option" selected="" style="display: none;" value="0">Select Bank</option>
                                     <option value="bank1">Bank 1</option>
                                     <option value="bank2">Bank 2</option>
                                 </select>
                             </div>
                             <div class="col-lg-4">
                                 <label for="bbranch" class="form-label required">Bank Branch</label>
-                                <select id="bbranch" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Bank Branch</option>
+                                <select id="bbranch" class="form-select" data-attr="mandatory">
+                                    <option class="first-option" selected="" style="display: none;" value="0">Select Bank Branch</option>
                                     <option value="branc1">Branch 1</option>
                                     <option value="branch2">Branch 2</option>
                                 </select>
                             </div>
                             <div class="col-lg-4">
                                 <label for="accnum" class="form-label required">Account Number</label>
-                                <input type="text" id="accnum" class="form-control" placeholder="Enter Your Acoount Number">
+                                <input type="text" id="accnum" class="form-control" placeholder="Enter Your Acoount Number" data-attr="mandatory">
                             </div>
                         </div>
                         <div class="row g-3">
@@ -310,8 +310,8 @@
                         <div class="row g-3 mb-3">
                             <div class="col-lg-3">
                                 <label for="jaccname" class="form-label required">Name</label>
-                                <select id="jaccname" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Mr./Ms.</option>
+                                <select id="jaccname" class="form-select" data-attr="mandatory">
+                                    <option class="first-option" selected="" style="display: none;" value="0">Mr./Ms.</option>
                                     <option value="Mr">Mr.</option>
                                     <option value="Ms.">Ms.</option>
                                 </select>
@@ -324,8 +324,8 @@
                         <div class="row g-3 mb-3">
                             <div class="col-lg-3">
                                 <label for="fojhname" class="form-label required">Father's/Husband's Name</label>
-                                <select class="form-select" id="fojhname">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Father's/Husband's Name</option>
+                                <select class="form-select" id="fojhname" data-attr="mandatory">
+                                    <option class="first-option" selected="" style="display: none;" value="0">Father's/Husband's Name</option>
                                     <option value="mr">Father's Name</option>
                                     <option value="ms">Husband's Name</option>
                                 </select>
@@ -336,18 +336,18 @@
                             </div>
                             <div class="col-lg-4">
                                 <label for="jhmname" class="form-label required">Mother's Name</label>
-                                <input id="jhmname" type="text" class="form-control" placeholder="Joint Holder Mother's Name">
+                                <input id="jhmname" type="text" class="form-control" placeholder="Joint Holder Mother's Name" data-attr="mandatory">
                             </div>
                         </div>
                         <div class="row g-3 mb-3">
                             <div class="col-lg-6">
                                 <label for="jadobirth" class="form-label required">Date of Birth</label>
-                                <input type="text" id="jadobirth" class="form-control DateInput check-date" placeholder="Date of Birth">
+                                <input type="text" id="jadobirth" class="form-control DateInput check-date" placeholder="Date of Birth" data-attr="mandatory">
                             </div>
                             <div class="col-lg-6">
                                 <label for="jaocupation" class="form-label">Occupation</label>
                                 <select id="jaocupation" class="form-select">
-                                    <option class="first-option" value="0" selected="" disabled="" style="display: none;">Joint Holder Occupation</option>
+                                    <option class="first-option" value="0" selected="" style="display: none;">Joint Holder Occupation</option>
                                     <option value="1">Service Holder</option>
                                     <option value="2">Programming</option>
                                     <option value="3">Housewife</option>
@@ -368,7 +368,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <label for="janmobnum" class="form-label required">Mobile Number</label>
-                                <input type="text" id="janmobnum" class="form-control" placeholder="Joint Holder Mobile Number">
+                                <input type="text" id="janmobnum" class="form-control" placeholder="Joint Holder Mobile Number" data-attr="mandatory">
                             </div>
                             <div class="col-lg-4">
                                 <label for="janemadd" class="form-label">Email Address</label>
@@ -391,7 +391,7 @@
                             <div class="col-lg-4">
                                 <label for="rwinves" class="form-label">Relationship with Investor</label>
                                 <select id="rwinves" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Relationhip</option>
+                                    <option class="first-option" selected="" style="display: none;">Select Relationhip</option>
                                     <option value="15">Sister</option>
                                     <option value="16">Friend</option>
                                     <option value="17">Wife</option>
@@ -410,7 +410,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <label for="acnumber" class="form-label required">Account Number</label>
-                                <input type="text" id="acnumber" class="form-control" placeholder="Account Number">
+                                <input type="text" id="acnumber" class="form-control" placeholder="Account Number" data-attr="mandatory">
                             </div>
                         </div>
                         <div class="row g-3 mb-3">
@@ -430,7 +430,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <label for="nmobnum" class="form-label required">Mobile Number</label>
-                                <input type="text" id="nmobnum" class="form-control" placeholder="Nominee Mobile Number">
+                                <input type="text" id="nmobnum" class="form-control" placeholder="Nominee Mobile Number" data-attr="mandatory">
                             </div>
                             <div class="col-lg-4">
                                 <label for="nemadd" class="form-label">Email Address</label>
@@ -453,7 +453,7 @@
                             <div class="col-lg-6">
                                 <label for="rwtinv" class="form-label">Relationship with Investor</label>
                                 <select id="rwtinv" class="form-select">
-                                    <option class="first-option" selected="" disabled="" style="display: none;">Select Relationhip</option>
+                                    <option class="first-option" selected="" style="display: none;">Select Relationhip</option>
                                     <option value="15">Sister</option>
                                     <option value="16">Friend</option>
                                     <option value="17">Wife</option>
@@ -488,7 +488,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <label for="poamobnum" class="form-label required">Mobile Number</label>
-                                <input type="text" id="poamobnum" class="form-control" placeholder="Power of Attorney Mobile Number">
+                                <input type="text" id="poamobnum" class="form-control" placeholder="Power of Attorney Mobile Number" data-attr="mandatory">
                             </div>
                             <div class="col-lg-4">
                                 <label for="poaemadd" class="form-label">Email Address</label>
@@ -556,7 +556,44 @@
                 }
             });
 
-            $(document).on("click", ".nextstep", function () {
+            function validateAndNavigate(currentTab, isFinishButton) {
+                var selectElements = currentTab.find('select[data-attr="mandatory"]');
+                var textInputElements = currentTab.find('input[type="text"][data-attr="mandatory"]');
+                var invalidElement = null;
+
+                selectElements.each(function () {
+                    if ($(this).val() == 0) {
+                        invalidElement = $(this);
+                        return false;
+                    }
+                });
+
+                if (!invalidElement) {
+                    textInputElements.each(function () {
+                        if ($(this).val() == "") {
+                            invalidElement = $(this);
+                            return false;
+                        }
+                    });
+                }
+
+                if (invalidElement) {
+                    invalidElement.focus();
+                    var label = currentTab.find('label[for="' + invalidElement.attr('id') + '"]').text();
+                    var elementType = invalidElement.prop('tagName').toLowerCase();
+                    var errorMessage = elementType == 'select' ? "Select " : "Type ";
+                    swal("Error!", errorMessage + label.toLowerCase() + ".", "error");
+                } else {
+                    if (isFinishButton) {
+                        var lastStep = $(".bs-wizard-step:last-child");
+                        lastStep.removeClass("disabled").addClass("complete completed active");
+                    } else {
+                        navigateToNextStep(currentTab);
+                    }
+                }
+            }
+
+            function navigateToNextStep(currentTab) {
                 var currentStep = $(".bs-wizard-step.active");
                 var nextStep = currentStep.next(".bs-wizard-step");
 
@@ -567,14 +604,25 @@
                 if (nextStep.length > 0) {
                     currentStep.removeClass("active complete");
                     nextStep.addClass("active");
-                    nextStep.prevAll(".bs-wizard-step").addClass("complete").removeClass("disabled");
+                    nextStep.prevAll(".bs-wizard-step").addClass("complete completed").removeClass("disabled");
 
                     var tabLink = nextStep.find("a[data-bs-toggle='tab']");
                     if (tabLink.length > 0) {
                         tabLink.tab('show');
                     }
                 }
+            }
+
+            $(document).on("click", ".nextstep", function () {
+                var currentTab = $('.tab-pane.active');
+                validateAndNavigate(currentTab, false);
             });
+
+            $(document).on("click", ".finish", function () {
+                var currentTab = $('.tab-pane.active');
+                validateAndNavigate(currentTab, true);
+            });
+
 
             $(document).on("click", ".previousstep", function () {
                 var currentStep = $(".bs-wizard-step.active");
@@ -594,12 +642,7 @@
                     }
                 }
             });
-
-            $(document).on("click", ".finish", function () {
-                var lastStep = $(".bs-wizard-step:last-child");
-                lastStep.removeClass("disabled").addClass("complete active");
-            });
-
+            
             $(document).on("change", "#accounttype", function () {
                 var selectedOption = $(this).val();
                 if (selectedOption == "joint") {

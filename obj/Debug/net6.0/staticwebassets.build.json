@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sdbgJrRO9qG4WBnoUm6abopDy6/3JakI9dNFroT5DJQ=",
+  "Hash": "6Gqr793WE17ReeJYFS5+gOapC5D3EsqDKlqchqLJ0bc=",
   "Source": "dp7",
   "BasePath": "_content/dp7",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "F:\\dp7\\wwwroot\\css\\cgltcl.css",
+      "SourceId": "dp7",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dp7\\wwwroot\\",
+      "BasePath": "_content/dp7",
+      "RelativePath": "css/cgltcl.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\cgltcl.css"
     },
     {
       "Identity": "F:\\dp7\\wwwroot\\css\\clientportalcommon.css",
@@ -204,6 +221,23 @@
       "OriginalItemSpec": "wwwroot\\css\\downloads.css"
     },
     {
+      "Identity": "F:\\dp7\\wwwroot\\css\\fundrequisition.css",
+      "SourceId": "dp7",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dp7\\wwwroot\\",
+      "BasePath": "_content/dp7",
+      "RelativePath": "css/fundrequisition.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\fundrequisition.css"
+    },
+    {
       "Identity": "F:\\dp7\\wwwroot\\css\\images\\ui-icons_444444_256x240.png",
       "SourceId": "dp7",
       "SourceType": "Discovered",
@@ -323,6 +357,40 @@
       "OriginalItemSpec": "wwwroot\\css\\index.css"
     },
     {
+      "Identity": "F:\\dp7\\wwwroot\\css\\iporesult.css",
+      "SourceId": "dp7",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dp7\\wwwroot\\",
+      "BasePath": "_content/dp7",
+      "RelativePath": "css/iporesult.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\iporesult.css"
+    },
+    {
+      "Identity": "F:\\dp7\\wwwroot\\css\\iposubscription.css",
+      "SourceId": "dp7",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dp7\\wwwroot\\",
+      "BasePath": "_content/dp7",
+      "RelativePath": "css/iposubscription.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\iposubscription.css"
+    },
+    {
       "Identity": "F:\\dp7\\wwwroot\\css\\jquery-ui.min.css",
       "SourceId": "dp7",
       "SourceType": "Discovered",
@@ -338,6 +406,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\jquery-ui.min.css"
+    },
+    {
+      "Identity": "F:\\dp7\\wwwroot\\css\\login.css",
+      "SourceId": "dp7",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dp7\\wwwroot\\",
+      "BasePath": "_content/dp7",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "F:\\dp7\\wwwroot\\css\\marketprice.css",
@@ -391,6 +476,23 @@
       "OriginalItemSpec": "wwwroot\\css\\news.css"
     },
     {
+      "Identity": "F:\\dp7\\wwwroot\\css\\profile.css",
+      "SourceId": "dp7",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dp7\\wwwroot\\",
+      "BasePath": "_content/dp7",
+      "RelativePath": "css/profile.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\profile.css"
+    },
+    {
       "Identity": "F:\\dp7\\wwwroot\\css\\servicedetails.css",
       "SourceId": "dp7",
       "SourceType": "Discovered",
@@ -440,6 +542,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\sweetalert.css"
+    },
+    {
+      "Identity": "F:\\dp7\\wwwroot\\css\\upcomingipo.css",
+      "SourceId": "dp7",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dp7\\wwwroot\\",
+      "BasePath": "_content/dp7",
+      "RelativePath": "css/upcomingipo.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\upcomingipo.css"
     },
     {
       "Identity": "F:\\dp7\\wwwroot\\data\\aboutcompinfo.json",
@@ -1173,6 +1292,40 @@
       "OriginalItemSpec": "wwwroot\\images\\ucas-logo.svg"
     },
     {
+      "Identity": "F:\\dp7\\wwwroot\\images\\useravater.png",
+      "SourceId": "dp7",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dp7\\wwwroot\\",
+      "BasePath": "_content/dp7",
+      "RelativePath": "images/useravater.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\useravater.png"
+    },
+    {
+      "Identity": "F:\\dp7\\wwwroot\\js\\aos.js",
+      "SourceId": "dp7",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dp7\\wwwroot\\",
+      "BasePath": "_content/dp7",
+      "RelativePath": "js/aos.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\aos.js"
+    },
+    {
       "Identity": "F:\\dp7\\wwwroot\\js\\bootstrap.min.js",
       "SourceId": "dp7",
       "SourceType": "Discovered",
@@ -1188,6 +1341,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.min.js"
+    },
+    {
+      "Identity": "F:\\dp7\\wwwroot\\js\\easy-responsive-tabs.js",
+      "SourceId": "dp7",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dp7\\wwwroot\\",
+      "BasePath": "_content/dp7",
+      "RelativePath": "js/easy-responsive-tabs.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\easy-responsive-tabs.js"
     },
     {
       "Identity": "F:\\dp7\\wwwroot\\js\\jquery.browser.min.js",
@@ -1256,6 +1426,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\jquery-ui.min.js"
+    },
+    {
+      "Identity": "F:\\dp7\\wwwroot\\js\\login.js",
+      "SourceId": "dp7",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dp7\\wwwroot\\",
+      "BasePath": "_content/dp7",
+      "RelativePath": "js/login.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\login.js"
     },
     {
       "Identity": "F:\\dp7\\wwwroot\\js\\main.js",

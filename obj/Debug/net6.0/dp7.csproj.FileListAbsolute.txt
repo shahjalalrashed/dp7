@@ -21,6 +21,8 @@ F:\dp7\obj\Debug\net6.0\staticwebassets.pack.json
 F:\dp7\obj\Debug\net6.0\staticwebassets.build.json
 F:\dp7\obj\Debug\net6.0\staticwebassets.development.json
 F:\dp7\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+F:\dp7\obj\Debug\net6.0\scopedcss\Views\Shared\_LayoutClient.cshtml.rz.scp.css
+F:\dp7\obj\Debug\net6.0\scopedcss\Views\Shared\_LayoutLogin.cshtml.rz.scp.css
 F:\dp7\obj\Debug\net6.0\scopedcss\bundle\dp7.styles.css
 F:\dp7\obj\Debug\net6.0\scopedcss\projectbundle\dp7.bundle.scp.css
 F:\dp7\obj\Debug\net6.0\dp7.dll
@@ -28,4 +30,3 @@ F:\dp7\obj\Debug\net6.0\refint\dp7.dll
 F:\dp7\obj\Debug\net6.0\dp7.pdb
 F:\dp7\obj\Debug\net6.0\dp7.genruntimeconfig.cache
 F:\dp7\obj\Debug\net6.0\ref\dp7.dll
-F:\dp7\obj\Debug\net6.0\scopedcss\Views\Shared\_LayoutLogin.cshtml.rz.scp.css

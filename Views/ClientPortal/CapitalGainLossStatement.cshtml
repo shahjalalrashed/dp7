@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Capital Gain Loss Statement";
+	Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/cgltcl.css" />
+}
+
+<!-- ----------------------------------------- -->
+<!--       CAPITAL GAIN LOSS STATEMENT         -->
+<!-- ----------------------------------------- -->
+
+<section class="container ptb60 text-center">
+    <div class="sec-title">
+        <h2>CAPITAL GAIN-LOSS STATEMENT</h2>
+    </div>
+
+    <div class="sec-desc pt-3">
+
+        <div class="card brndcard cglsec mt-2 mb-2">            
+            <div class="card-body cglbottomcont">
+                <div class="row g-3">
+                    <div class="col-lg-6">
+                        <label for="fromdate" class="form-label">From Date</label>
+                        <input type="text" id="fromdate" class="form-control DateInput check-date" placeholder="From Date">
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="todate" class="form-label">To Date</label>
+                        <input type="text" id="todate" class="form-control DateInput check-date" placeholder="To Date">
+                    </div>                    
+                    <div class="col-lg-12 d-flex justify-content-center align-items-center">
+                        @* <div class="form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="hawlackbox" value="option1">
+                            <label class="form-check-label" for="hawlackbox">Hawla</label>
+                        </div> *@
+                        <button type="button" class="btn btn-brand"><span class="fa-solid fa-file-lines icn"></span>Show</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>   
+
+</section>
+
+
+@section Scripts {
+	<script type="text/javascript">
+        $(function () {
+            $("#fromdate").datepicker(
+                {
+                    changeYear: true,
+                    changeMonth: true,
+                    yearRange: "-70:+40",
+                    maxDate: "+40Y",
+                    minDate: "-85Y",
+                    dateFormat: 'dd/mm/yy'
+                });
+            $("#todate").datepicker(
+                {
+                    changeYear: true,
+                    changeMonth: true,
+                    yearRange: "-70:+40",
+                    maxDate: "+40Y",
+                    minDate: "-85Y",
+                    dateFormat: 'dd/mm/yy'
+                });
+        });
+
+		$(document).ready(function () {
+
+        });
+	</script>
+}

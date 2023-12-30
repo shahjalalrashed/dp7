@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "Fund Requisition";
+	Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/fundrequisition.css" />
+}
+
+<!-- ----------------------------------------- -->
+<!--              FundRequisition              -->
+<!-- ----------------------------------------- -->
+
+<section class="container ptb60 text-center">
+    <div class="sec-title">
+        <h2>FUND REQUISITION</h2>
+    </div>
+
+    <div class="sec-desc pt-3">
+        <div class="card brndcard frsec mt-2 mb-2">            
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-lg-11">
+                        <input type="text" class="form-control" placeholder="Requisition Amount">
+                    </div>                    
+                    <div class="col-lg-1 d-flex justify-content-center align-items-center">
+                        <button type="button" class="btn btn-brand">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pt-3 frsec">
+        <div class="table">
+            <div class="thead">
+                <div class="tr">
+                    <div class="th"> Requisition No. </div>
+                    <div class="th"> Requisition Date </div>
+                    <div class="th"> Requisition Amount </div>
+                    <div class="th"> Approved Amount </div>
+                    <div class="th"> Status </div>
+                </div>
+            </div>
+            <div class="tbody">
+                <div class="tr">
+                    <div class="td" data-label="Requisition No.">
+                        <div><span class="fa-solid fa-hashtag icn"></span>816</div>
+                    </div>
+                    <div class="td" data-label="Requisition Date">
+                        <div><span class="fa-solid fa-calendar-days icn"></span>30 Mar 2022</div>
+                    </div>
+                    <div class="td" data-label="Requisition Amount">
+                        <div><span class="fa-solid fa-bangladeshi-taka-sign icn"></span>18.10</div>
+                    </div>
+                    <div class="td" data-label="Approved Amount">
+                        <div><span class="fa-solid fa-bangladeshi-taka-sign icn"></span>18.10</div>
+                    </div>
+                    <div class="td" data-label="Status">
+                        <div class="status status-success">
+                            PAYMENT
+                        </div>
+                    </div>
+                </div>
+                <div class="tr">
+                    <div class="td" data-label="Requisition No.">
+                        <div><span class="fa-solid fa-hashtag icn"></span>816</div>
+                    </div>
+                    <div class="td" data-label="Requisition Date">
+                        <div><span class="fa-solid fa-calendar-days icn"></span>30 Mar 2022</div>
+                    </div>
+                    <div class="td" data-label="Requisition Amount">
+                        <div><span class="fa-solid fa-bangladeshi-taka-sign icn"></span>18.10</div>
+                    </div>
+                    <div class="td" data-label="Approved Amount">
+                        <div><span class="fa-solid fa-bangladeshi-taka-sign icn"></span>18.10</div>
+                    </div>
+                    <div class="td" data-label="Status">
+                        <div class="status status-danger">
+                            REJECTED
+                        </div>
+                    </div>
+                </div>
+                <div class="tr">
+                    <div class="td" data-label="Requisition No.">
+                        <div><span class="fa-solid fa-hashtag icn"></span>816</div>
+                    </div>
+                    <div class="td" data-label="Requisition Date">
+                        <div><span class="fa-solid fa-calendar-days icn"></span>30 Mar 2022</div>
+                    </div>
+                    <div class="td" data-label="Requisition Amount">
+                        <div><span class="fa-solid fa-bangladeshi-taka-sign icn"></span>18.10</div>
+                    </div>
+                    <div class="td" data-label="Approved Amount">
+                        <div><span class="fa-solid fa-bangladeshi-taka-sign icn"></span>18.10</div>
+                    </div>
+                    <div class="td" data-label="Status">
+                        <div class="status status-warning">
+                            PENDING
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>   
+
+</section>
+
+
+@section Scripts {
+	<script type="text/javascript">
+        $(document).ready(function () {
+
+        });
+	</script>
+}
